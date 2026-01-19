@@ -1,4 +1,4 @@
-name: Deploy to HostGator (FTPS)
+name: Deploy to HostGator (FTP)
 
 on:
   push:
@@ -11,14 +11,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Upload via FTPS
+      - name: Upload via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           port: ${{ secrets.FTP_PORT }}
-          protocol: ftps
+          protocol: ftp
           local-dir: ./
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
           dangerous-clean-slate: false
