@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managed IT Services | Simple.Tech San Diego</title>
+    <meta name="description" content="Comprehensive managed IT services for San Diego businesses. 24/7 support, proactive monitoring, security management, and strategic IT planning from senior engineers.">
+    <link rel="canonical" href="https://www.simple.tech/services/managed-it/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; line-height: 1.7; color: #e8e8e8; background: #0a0a0a; font-weight: 300; letter-spacing: 0.3px; }
+        header { background: #0a0a0a; border-bottom: 1px solid #2a2a2a; position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1500px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; }
+        .logo { font-size: 1.3rem; font-weight: 300; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+        .nav-links { display: flex; gap: 3.5rem; list-style: none; }
+        .nav-links a { color: #e8e8e8; text-decoration: none; font-weight: 300; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.6; }
+        .contact-info { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; text-align: right; font-weight: 300; }
+        .contact-info a { color: #e8e8e8; text-decoration: none; }
+        .page-header { background: #0f0f0f; padding: 6rem 4rem 4rem; text-align: center; border-bottom: 1px solid #1a1a1a; }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 200; color: #ffffff; }
+        .page-header p { font-size: 1.2rem; color: #b8b8b8; max-width: 800px; margin: 0 auto; }
+        .content-section { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
+        .content-section h2 { font-size: 2.5rem; color: #ffffff; font-weight: 200; margin-bottom: 2rem; }
+        .content-section p { color: #b8b8b8; font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem; }
+
+        /* Comparison Table Styles */
+        .comparison-section { background: #0f0f0f; padding: 6rem 4rem; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
+        .comparison-intro { max-width: 900px; margin: 0 auto 4rem; text-align: center; }
+        .comparison-intro h2 { font-size: 2.8rem; color: #ffffff; font-weight: 200; margin-bottom: 1.5rem; }
+        .comparison-intro p { font-size: 1.1rem; color: #b8b8b8; line-height: 1.9; }
+
+        .comparison-table-container { max-width: 1400px; margin: 0 auto; overflow-x: auto; }
+        .comparison-table { width: 100%; border-collapse: collapse; background: #0a0a0a; }
+        
+        .comparison-table thead th { 
+            background: #0a0a0a; 
+            padding: 2rem 1.5rem; 
+            text-align: left; 
+            border-bottom: 2px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .comparison-table thead th:first-child { 
+            width: 30%; 
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+        }
+        
+        .comparison-table thead th:not(:first-child) {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 300;
+        }
+
+        .comparison-table thead .highlight-column {
+            background: #0f0f0f;
+            border-left: 2px solid #4CAF50;
+            border-right: 2px solid #4CAF50;
+            border-top: 2px solid #4CAF50;
+        }
+
+        .comparison-table tbody tr { border-bottom: 1px solid #1a1a1a; }
+        
+        .comparison-table tbody td {
+            padding: 2rem 1.5rem;
+            vertical-align: top;
+        }
+
+        .comparison-table tbody .highlight-column {
+            background: #0f0f0f;
+            border-left: 2px solid #4CAF50;
+            border-right: 2px solid #4CAF50;
+        }
+
+        .comparison-table tbody tr:last-child .highlight-column {
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        .comparison-table .category-cell {
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .comparison-table .value-cell {
+            font-size: 0.95rem;
+            color: #b8b8b8;
+            line-height: 1.8;
+        }
+
+        .comparison-table .positive {
+            color: #66bb6a;
+        }
+
+        .comparison-table .negative {
+            color: #ff8888;
+        }
+
+        .comparison-table .neutral {
+            color: #b8b8b8;
+        }
+
+        .checkmark { color: #4CAF50; margin-right: 0.5rem; }
+        .xmark { color: #ff6b6b; margin-right: 0.5rem; }
+        .dash { color: #888; margin-right: 0.5rem; }
+
+        .cost-breakdown { 
+            background: #0a0a0a; 
+            padding: 1.5rem; 
+            margin-top: 1rem; 
+            border: 1px solid #2a2a2a;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .cost-breakdown strong {
+            color: #b8b8b8;
+            font-weight: 400;
+        }
+
+        /* Services List */
+        .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin: 4rem 0; }
+        .service-item { background: #0f0f0f; padding: 2.5rem; border: 1px solid #2a2a2a; }
+        .service-item h3 { color: #ffffff; font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; }
+        .service-item p { color: #b8b8b8; font-size: 0.95rem; line-height: 1.8; }
+
+        .cta-section { background: #0f0f0f; padding: 5rem 4rem; text-align: center; border-top: 1px solid #1a1a1a; }
+        .cta-section h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1.5rem; font-weight: 200; }
+        .cta-section p { color: #b8b8b8; font-size: 1.1rem; margin-bottom: 2rem; }
+        .cta-button { display: inline-block; padding: 1.1rem 3.5rem; background: #ffffff; color: #0a0a0a; text-decoration: none; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.4s ease; border: 1px solid #ffffff; }
+        .cta-button:hover { background: transparent; color: #ffffff; }
+
+        footer { background: #0a0a0a; padding: 4rem; border-top: 1px solid #1a1a1a; }
+        .footer-content { max-width: 1500px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 3rem; }
+        .footer-logo { font-size: 1.1rem; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; }
+        .footer-contact a { color: #b8b8b8; text-decoration: none; display: block; margin: 0.5rem 0; font-size: 0.85rem; }
+        .footer-address { color: #888; font-size: 0.85rem; line-height: 1.8; }
+
+        @media (max-width: 1024px) {
+            .comparison-table thead th:first-child { width: 25%; font-size: 0.75rem; }
+            .comparison-table thead th:not(:first-child) { font-size: 1.1rem; }
+            .comparison-table tbody td { padding: 1.5rem 1rem; }
+        }
+
+        @media (max-width: 768px) { 
+            nav { flex-direction: column; gap: 1.5rem; padding: 1.5rem 2rem; } 
+            .nav-links { flex-direction: column; gap: 1rem; } 
+            .page-header { padding: 4rem 2rem; } 
+            .page-header h1 { font-size: 2.5rem; } 
+            .content-section, .comparison-section, .cta-section { padding: 4rem 2rem; } 
+            .services-list { grid-template-columns: 1fr; } 
+            .footer-content { flex-direction: column; text-align: center; }
+            
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table thead th { padding: 1rem 0.75rem; }
+            .comparison-table thead th:first-child { font-size: 0.7rem; }
+            .comparison-table thead th:not(:first-child) { font-size: 1rem; }
+            .comparison-table tbody td { padding: 1rem 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Managed IT Services</h1>
+        <p>Your complete IT department. We handle everything from helpdesk support to strategic planning, so you can focus on your business.</p>
+    </section>
+
+    <section class="content-section">
+        <h2>Complete IT Management</h2>
+        <p>Simple.Tech serves as your full-service IT department, managing every aspect of your technology infrastructure. From daily helpdesk support to long-term strategic planning, vendor coordination, and security management—we handle it all with predictable monthly costs and senior-level expertise.</p>
+        
+        <p>Unlike traditional managed service providers who use tiered support systems with junior technicians, every client works directly with our senior engineers. This means faster problem resolution, better strategic guidance, and technology decisions informed by deep experience.</p>
+    </section>
+
+    <section class="comparison-section">
+        <div class="comparison-intro">
+            <h2>Comparing Your IT Options</h2>
+            <p>When it comes to managing your technology infrastructure, you have three primary options. Here's an honest comparison of what each actually costs and delivers.</p>
+        </div>
+
+        <div class="comparison-table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Full-Time IT Hire</th>
+                        <th class="highlight-column">Simple.Tech Managed IT</th>
+                        <th>Traditional MSP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cost Row -->
+                    <tr>
+                        <td class="category-cell">Annual Cost</td>
+                        <td class="value-cell">
+                            <span class="neutral">$85,000 - $120,000</span>
+                            <div class="cost-breakdown">
+                                <strong>Breakdown:</strong><br>
+                                Salary: $70K-$95K<br>
+                                Benefits (30%): $21K-$28K<br>
+                                Training & certs: $2K-$5K<br>
+                                Tools & software: $3K-$6K
+                            </div>
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="positive">$42,000 - $84,000</span>
+                            <div class="cost-breakdown">
+                                <strong>Breakdown:</strong><br>
+                                Monthly service: $3,500-$7,000<br>
+                                No benefits overhead<br>
+                                All tools included<br>
+                                Team of senior engineers
+                            </div>
+                        </td>
+                        <td class="value-cell">
+                            <span class="negative">$48,000 - $96,000+</span>
+                            <div class="cost-breakdown">
+                                <strong>Breakdown:</strong><br>
+                                Monthly fee: $4,000-$8,000<br>
+                                Plus 25-40% markup on all software/hardware<br>
+                                Project fees often extra<br>
+                                Actual costs often higher than quoted
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Expertise Row -->
+                    <tr>
+                        <td class="category-cell">Expertise Level</td>
+                        <td class="value-cell">
+                            <span class="dash">—</span> Limited to one person's skillset<br>
+                            <span class="dash">—</span> Knowledge gaps in areas outside their background<br>
+                            <span class="dash">—</span> No backup when on vacation or sick
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Team of senior engineers (10+ years each)<br>
+                            <span class="checkmark">✓</span> Broad expertise across security, cloud, infrastructure<br>
+                            <span class="checkmark">✓</span> Always available - no single point of failure
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Tiered support (junior techs first contact)<br>
+                            <span class="dash">—</span> Senior engineers only after escalation<br>
+                            <span class="dash">—</span> Different technicians each interaction
+                        </td>
+                    </tr>
+
+                    <!-- Response Time Row -->
+                    <tr>
+                        <td class="category-cell">Availability & Access</td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Immediate (when available)<br>
+                            <span class="xmark">✗</span> But no coverage during PTO, sick days, or after hours<br>
+                            <span class="xmark">✗</span> Issues can wait days if on vacation
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Direct access to senior engineers<br>
+                            <span class="checkmark">✓</span> After-hours support available<br>
+                            <span class="checkmark">✓</span> Coverage 365 days/year
+                        </td>
+                        <td class="value-cell">
+                            <span class="dash">—</span> Initial contact through helpdesk queue<br>
+                            <span class="dash">—</span> Complex issues require escalation process<br>
+                            <span class="neutral">Varies widely by provider and plan tier</span>
+                        </td>
+                    </tr>
+
+                    <!-- Problem Resolution Row -->
+                    <tr>
+                        <td class="category-cell">Problem Resolution</td>
+                        <td class="value-cell">
+                            <span class="dash">—</span> Dependent on individual's experience<br>
+                            <span class="xmark">✗</span> May need to research unfamiliar issues<br>
+                            <span class="xmark">✗</span> No peer review or second opinions
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Senior engineer on first contact<br>
+                            <span class="checkmark">✓</span> No escalation delays<br>
+                            <span class="checkmark">✓</span> Team collaboration on complex problems
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Junior tech attempts resolution first<br>
+                            <span class="xmark">✗</span> Escalation delays common<br>
+                            <span class="neutral">Eventually gets to someone who can fix it</span>
+                        </td>
+                    </tr>
+
+                    <!-- Strategic Planning Row -->
+                    <tr>
+                        <td class="category-cell">Strategic Planning</td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Knows your business intimately<br>
+                            <span class="dash">—</span> Limited exposure to alternative approaches<br>
+                            <span class="xmark">✗</span> May not know what's possible/available
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Experience across multiple industries<br>
+                            <span class="checkmark">✓</span> Exposure to diverse solutions<br>
+                            <span class="checkmark">✓</span> No vendor bias in recommendations
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Biased toward solutions they resell<br>
+                            <span class="xmark">✗</span> May recommend expensive options for commission<br>
+                            <span class="dash">—</span> Strategic planning often superficial
+                        </td>
+                    </tr>
+
+                    <!-- Vendor Management Row -->
+                    <tr>
+                        <td class="category-cell">Vendor Management</td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Direct relationships with vendors<br>
+                            <span class="xmark">✗</span> Limited negotiating power<br>
+                            <span class="xmark">✗</span> Handling vendor issues takes time from other work
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> You maintain direct vendor relationships<br>
+                            <span class="checkmark">✓</span> We manage coordination and escalations<br>
+                            <span class="checkmark">✓</span> No markup - you get best pricing
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Vendors accounts often in MSP's name<br>
+                            <span class="xmark">✗</span> 25-40% markup on everything<br>
+                            <span class="xmark">✗</span> Creates lock-in and dependency
+                        </td>
+                    </tr>
+
+                    <!-- Scalability Row -->
+                    <tr>
+                        <td class="category-cell">Scalability</td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Overwhelmed as company grows<br>
+                            <span class="xmark">✗</span> Need to hire additional staff at growth stages<br>
+                            <span class="neutral">Works for 15-30 employees, struggles beyond that</span>
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Scales seamlessly from 10 to 100+ employees<br>
+                            <span class="checkmark">✓</span> No hiring/training delays<br>
+                            <span class="checkmark">✓</span> Team grows with your needs
+                        </td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Can handle growth<br>
+                            <span class="xmark">✗</span> But costs increase disproportionately<br>
+                            <span class="neutral">Often add fees as you scale</span>
+                        </td>
+                    </tr>
+
+                    <!-- Coverage Risk Row -->
+                    <tr>
+                        <td class="category-cell">Coverage Risk</td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Single point of failure<br>
+                            <span class="xmark">✗</span> No coverage when on PTO (3-4 weeks/year)<br>
+                            <span class="xmark">✗</span> If they quit, you're scrambling
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Team coverage - no gaps<br>
+                            <span class="checkmark">✓</span> 365-day availability<br>
+                            <span class="checkmark">✓</span> No dependency on single person
+                        </td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Team coverage available<br>
+                            <span class="dash">—</span> But may get different tech each time<br>
+                            <span class="dash">—</span> Consistency varies
+                        </td>
+                    </tr>
+
+                    <!-- Transparency Row -->
+                    <tr>
+                        <td class="category-cell">Cost Transparency</td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Completely transparent<br>
+                            <span class="checkmark">✓</span> You know exact salary and benefits<br>
+                            <span class="neutral">Predictable annual costs</span>
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> Clear monthly fee<br>
+                            <span class="checkmark">✓</span> Detailed invoices<br>
+                            <span class="checkmark">✓</span> No hidden markups<br>
+                            <span class="checkmark">✓</span> Direct vendor pricing on all software/hardware
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Vague invoices ("Professional Services")<br>
+                            <span class="xmark">✗</span> Hidden markups on products<br>
+                            <span class="xmark">✗</span> Actual costs hard to track<br>
+                            <span class="xmark">✗</span> Surprise charges common
+                        </td>
+                    </tr>
+
+                    <!-- Independence Row -->
+                    <tr>
+                        <td class="category-cell">Flexibility & Independence</td>
+                        <td class="value-cell">
+                            <span class="checkmark">✓</span> Complete control<br>
+                            <span class="checkmark">✓</span> Own all vendor relationships<br>
+                            <span class="neutral">But you're responsible for everything</span>
+                        </td>
+                        <td class="value-cell highlight-column">
+                            <span class="checkmark">✓</span> You own all vendor relationships<br>
+                            <span class="checkmark">✓</span> Complete documentation provided<br>
+                            <span class="checkmark">✓</span> Can transition to another provider easily<br>
+                            <span class="checkmark">✓</span> No lock-in by design
+                        </td>
+                        <td class="value-cell">
+                            <span class="xmark">✗</span> Often controls your vendor accounts<br>
+                            <span class="xmark">✗</span> Poor or no documentation<br>
+                            <span class="xmark">✗</span> Switching providers is difficult<br>
+                            <span class="xmark">✗</span> Intentional lock-in
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>What's Included in Simple.Tech Managed IT</h2>
+        
+        <div class="services-list">
+            <div class="service-item">
+                <h3>IT Support & Helpdesk</h3>
+                <p>Direct access to senior engineers who resolve issues quickly. No long wait times, no escalation delays—just expert help when you need it.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Proactive System Monitoring</h3>
+                <p>We continuously monitor your infrastructure to identify and resolve potential issues before they impact your business operations.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Security Management</h3>
+                <p>Comprehensive security oversight including threat monitoring, patch management, access controls, and ongoing security assessments.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Strategic IT Planning</h3>
+                <p>We work with your leadership team to align technology initiatives with business objectives, creating roadmaps for growth and efficiency.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Vendor Management</h3>
+                <p>We manage relationships with all your technology vendors, handling procurement, renewals, and support escalations on your behalf.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Documentation & Procedures</h3>
+                <p>Complete documentation of your IT environment, configurations, and procedures—ensuring continuity and knowledge transfer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready for Predictable IT Management?</h2>
+        <p>Let's discuss how our managed services can support your business.</p>
+        <a href="/contact/contact.html" class="cta-button">Schedule Consultation</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Simple.Tech</div>
+            <div class="footer-contact">
+                <a href="tel:+16193454505">(619) 345 4505</a>
+                <a href="/cdn-cgi/l/email-protection#b9d1dcd5c9f9cad0d4c9d5dc97cddcdad1"><span class="__cf_email__" data-cfemail="d9b1bcb5a999aab0

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Services for San Diego Biotech & Life Sciences | Simple.Tech</title>
+    <meta name="description" content="IT infrastructure and security for San Diego's biotech and life sciences companies. We support your compliance requirements with senior engineers who understand the unique technology challenges of research organizations.">
+    <link rel="canonical" href="https://www.simple.tech/industries/biotech-life-sciences/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #e8e8e8;
+            background: #0a0a0a;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 4rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.6;
+        }
+
+        .hero {
+            background: #0f0f0f;
+            padding: 7rem 4rem 6rem;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.8rem;
+            font-weight: 200;
+            color: #ffffff;
+            line-height: 1.2;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #b8b8b8;
+            font-weight: 300;
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .intro-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .intro-section p {
+            font-size: 1.15rem;
+            color: #b8b8b8;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-section strong {
+            color: #e8e8e8;
+            font-weight: 400;
+        }
+
+        .sd-context {
+            background: #0f0f0f;
+            padding: 3rem;
+            border-left: 3px solid #4CAF50;
+            margin: 3rem 0;
+        }
+
+        .sd-context h3 {
+            font-size: 1.1rem;
+            color: #66bb6a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .sd-context p {
+            color: #e8e8e8;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .sd-context p:last-child {
+            margin-bottom: 0;
+        }
+
+        .challenges-section {
+            background: #0f0f0f;
+            padding: 6rem 4rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            font-weight: 200;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #b8b8b8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .challenges-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .challenge-card {
+            background: #0a0a0a;
+            padding: 3rem;
+            border: 1px solid #2a2a2a;
+        }
+
+        .challenge-card h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-card p {
+            color: #b8b8b8;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .challenge-card li {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .challenge-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .compliance-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .compliance-grid {
+            display: grid;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .compliance-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .compliance-icon {
+            font-size: 3.5rem;
+            font-weight: 200;
+            color: #ffffff;
+            opacity: 0.15;
+            text-align: center;
+        }
+
+        .compliance-content h3 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-content .regulation-code {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .compliance-content p {
+            color: #b8b8b8;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .what-we-do {
+            background: #0f0f0f;
+            padding: 2.5rem;
+            border-left: 3px solid #ffffff;
+            margin: 2rem 0;
+        }
+
+        .what-we-do h4 {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .what-we-do ul {
+            list-style: none;
+        }
+
+        .what-we-do li {
+            color: #b8b8b8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .what-we-do li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .real-world-section {
+            background: #0f0f0f;
+            padding: 6rem 4rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .case-studies {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            display: grid;
+            gap: 4rem;
+        }
+
+        .case-study {
+            background: #0a0a0a;
+            padding: 3rem;
+            border: 1px solid #2a2a2a;
+        }
+
+        .case-study-header {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .company-type {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 1rem;
+            border: 1px solid #2a2a2a;
+            background: #0f0f0f;
+        }
+
+        .case-study h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study p {
+            color: #b8b8b8;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .outcome-highlight {
+            background: #0f0f0f;
+            padding: 2rem;
+            border-left: 3px solid #4CAF50;
+            margin-top: 2rem;
+        }
+
+        .outcome-highlight p {
+            color: #e8e8e8;
+            font-size: 1.05rem;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .outcome-highlight strong {
+            color: #66bb6a;
+        }
+
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: #0f0f0f;
+            padding: 2.5rem;
+            border: 1px solid #2a2a2a;
+        }
+
+        .service-card h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card p {
+            color: #b8b8b8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin-bottom: 0.7rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .service-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        .why-local-section {
+            background: #0f0f0f;
+            padding: 6rem 4rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .why-local-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .why-local-content h2 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            font-weight: 200;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .local-advantages {
+            display: grid;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .local-advantage {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .advantage-number {
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: #ffffff;
+            opacity: 0.2;
+        }
+
+        .advantage-content h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-content p {
+            color: #b8b8b8;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: #0a0a0a;
+            padding: 6rem 4rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+        }
+
+        .cta-section p {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.1rem 3.5rem;
+            background: #ffffff;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            border: 1px solid #ffffff;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 4rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .footer-contact a {
+            color: #b8b8b8;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            font-weight: 300;
+            transition: opacity 0.3s;
+        }
+
+        .footer-contact a:hover {
+            opacity: 0.6;
+        }
+
+        .footer-address {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .compliance-item,
+            .local-advantage {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .compliance-icon,
+            .advantage-number {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: center;
+                padding: 1rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-info {
+                display: none;
+            }
+
+            .hero {
+                padding: 4rem 2rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .intro-section,
+            .challenges-section,
+            .compliance-section,
+            .real-world-section,
+            .services-section,
+            .why-local-section,
+            .cta-section {
+                padding: 4rem 2rem;
+            }
+
+            .challenges-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-item {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2,
+            .why-local-content h2 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-eyebrow">IT Services for San Diego Biotech & Life Sciences</div>
+        <h1>Reliable IT Infrastructure for Research-Driven Organizations</h1>
+        <p class="subtitle">IT services designed for San Diego's biotech and life sciences sector. We understand the unique technology challenges of research organizations, data security requirements, and the importance of uptime when experiments are running.</p>
+    </section>
+
+    <section class="intro-section">
+        <p>San Diego's biotech and life sciences cluster is one of the most concentrated in the world. From Torrey Pines to Sorrento Valley, companies are developing breakthrough therapeutics, medical devices, diagnostics, and research tools that will transform healthcare.</p>
+
+        <p>But here's what most IT providers don't understand about this industry: <strong>your technology needs are fundamentally different from a typical business.</strong> You're running expensive scientific instruments that need reliable network connectivity. You're managing research data that has real intellectual property value. You have compliance obligations that require documented IT controls. And when an experiment is running, you can't afford system downtime.</p>
+
+        <div class="sd-context">
+            <h3>Why San Diego Life Sciences is Different</h3>
+            <p>We work with biotech and life sciences companies in the Torrey Pines Mesa, Sorrento Valley, and UTC corridors. We understand that a "typical small business IT setup" doesn't work when you're running lab instruments connected to data systems, managing sensitive research data, coordinating with external research partners, or preparing for investor due diligence.</p>
+            <p>Your IT infrastructure needs to support science—not get in its way. And it needs to do so reliably, securely, and in a way that works with your compliance requirements.</p>
+        </div>
+
+        <p>Simple.Tech provides IT infrastructure, security, and support for San Diego life sciences companies. Our senior engineers understand the difference between standard business IT and research organization IT—and we work with your team to implement systems that support your specific operational needs.</p>
+    </section>
+
+    <section class="challenges-section">
+        <div class="section-header">
+            <h2>The Unique IT Challenges You Face</h2>
+            <p>Life sciences companies have technology requirements that most generic IT providers don't understand.</p>
+        </div>
+
+        <div class="challenges-grid">
+            <div class="challenge-card">
+                <h3>Compliance & Documentation</h3>
+                <p>You have regulatory requirements that create specific IT obligations. While we're not compliance consultants, we implement IT infrastructure that supports your compliance needs with proper documentation, access controls, and audit capabilities.</p>
+                <ul>
+                    <li>Documented system configurations and changes</li>
+                    <li>Access controls and user management</li>
+                    <li>System logging and audit trails</li>
+                    <li>Backup and recovery procedures</li>
+                    <li>Working with your QA/regulatory teams</li>
+                </ul>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Research Data Management</h3>
+                <p>Scientific data isn't like business documents. You're managing large datasets from instruments and analysis tools. Data must be backed up reliably, accessible to the right people, and preserved for years.</p>
+                <ul>
+                    <li>Large file storage and management</li>
+                    <li>Automated backup systems</li>
+                    <li>Instrument network connectivity</li>
+                    <li>Long-term data archival</li>
+                    <li>Data access controls</li>
+                </ul>
+            </div>
+
+            <div class="challenge-card">
+                <h3>IP Protection & Security</h3>
+                <p>Your research data, compound information, and unpublished results represent significant competitive value. A data breach could expose trade secrets to competitors or jeopardize patent applications.</p>
+                <ul>
+                    <li>Research data access controls</li>
+                    <li>Secure collaboration with external partners</li>
+                    <li>Protection against unauthorized access</li>
+                    <li>Secure document management</li>
+                    <li>IP-aware disaster recovery planning</li>
+                </ul>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Scientific Workflow Support</h3>
+                <p>Your researchers and lab personnel have different IT needs than typical office workers. They need instrument connectivity, specialized software, and systems that don't interrupt ongoing experiments.</p>
+                <ul>
+                    <li>Lab instrument network connectivity</li>
+                    <li>Support for scientific software</li>
+                    <li>Legacy system compatibility</li>
+                    <li>Minimal disruption to ongoing work</li>
+                    <li>After-hours support when experiments run late</li>
+                </ul>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Growth & Scaling</h3>
+                <p>Your IT needs change as you move from early stage through funding rounds to commercial operations. You need infrastructure that's appropriate for your current stage without creating technical debt that becomes expensive later.</p>
+                <ul>
+                    <li>Right-sized infrastructure for current stage</li>
+                    <li>Cloud-first approaches for capital efficiency</li>
+                    <li>Scalable security and backup systems</li>
+                    <li>Investor due diligence preparation</li>
+                    <li>Supporting organizational growth</li>
+                </ul>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Multi-Site Operations</h3>
+                <p>Many San Diego biotech companies operate across multiple locations—research lab in one area, office space elsewhere, remote team members. Your IT infrastructure needs to support this distributed model securely.</p>
+                <ul>
+                    <li>Secure connectivity between locations</li>
+                    <li>Centralized data access</li>
+                    <li>Consistent security policies</li>
+                    <li>Remote access for scientific staff</li>
+                    <li>Collaboration with external partners</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="compliance-section">
+        <div class="section-header">
+            <h2>IT Infrastructure That Supports Compliance</h2>
+            <p>While we're not compliance consultants, we implement IT systems with the documentation, controls, and reliability your compliance requirements demand.</p>
+        </div>
+
+        <div class="compliance-grid">
+            <div class="compliance-item">
+                <div class="compliance-icon">IT</div>
+                <div class="compliance-content">
+                    <h3>Documented & Controlled IT Systems</h3>
+                    <span class="regulation-code">Supporting Your Compliance Framework</span>
+                    
+                    <p>Many life sciences companies need IT infrastructure with documented configurations, change controls, and audit capabilities. We implement systems designed to support these requirements.</p>
+
+                    <div class="what-we-do">
+                        <h4>How We Support Your IT Compliance Needs</h4>
+                        <ul>
+                            <li>Documented system configurations and network architecture</li>
+                            <li>Change management procedures with approval workflows</li>
+                            <li>Access controls and user permission management</li>
+                            <li>System activity logging and audit trail capabilities</li>
+                            <li>Regular backup procedures with documented retention</li>
+                            <li>Disaster recovery plans and testing procedures</li>
+                            <li>Security controls and monitoring</li>
+                            <li>Working with your QA/regulatory teams on IT requirements</li>
+                            <li>Supporting third-party IT audits and assessments</li>
+                        </ul>
+                    </div>
+
+                    <p>We work collaboratively with your compliance team to ensure IT infrastructure meets your specific regulatory requirements.</p>
+                </div>
+            </div>
+
+            <div class="compliance-item">
+                <div class="compliance-icon">Rx</div>
+                <div class="compliance-content">
+                    <h3>Data Security & Protection</h3>
+                    <span class="regulation-code">HIPAA & Sensitive Data Handling</span>
+                    
+                    <p>If your research or clinical work involves protected health information (PHI), you have specific security requirements. We implement technical safeguards to protect sensitive data.</p>
+
+                    <div class="what-we-do">
+                        <h4>Technical Safeguards for Sensitive Data</h4>
+                        <ul>
+                            <li>Encryption for data at rest and in transit</li>
+                            <li>Access controls limiting data to authorized personnel</li>
+                            <li>Multi-factor authentication for system access</li>
+                            <li>Activity logging for systems containing sensitive data</li>
+                            <li>Secure backup and recovery procedures</li>
+                            <li>Network segmentation for sensitive systems</li>
+                            <li>Workstation and device security controls</li>
+                            <li>Secure data transmission for external collaboration</li>
+                            <li>Incident response procedures for security events</li>
+                        </ul>
+                    </div>
+
+                    <p>We implement HIPAA-appropriate technical controls while working with your compliance team on overall regulatory requirements.</p>
+                </div>
+            </div>
+
+            <div class="compliance-item">
+                <div class="compliance-icon">IP</div>
+                <div class="compliance-content">
+                    <h3>Intellectual Property Protection</h3>
+                    <span class="regulation-code">Protecting Research Data & Trade Secrets</span>
+                    
+                    <p>Your research data represents significant competitive value. We implement security controls specifically designed to protect intellectual property from unauthorized access or disclosure.</p>
+
+                    <div class="what-we-do">
+                        <h4>IP-Focused Security Measures</h4>
+                        <ul>
+                            <li>Granular access controls for sensitive research data</li>
+                            <li>Monitoring for unusual data access patterns</li>
+                            <li>Secure collaboration platforms for external partners</li>
+                            <li>Data loss prevention to prevent unauthorized copying</li>
+                            <li>Secure offboarding procedures for departing employees</li>
+                            <li>Network segmentation isolating valuable IP</li>
+                            <li>Encrypted backup of critical research data</li>
+                            <li>Documented procedures for IP data handling</li>
+                            <li>Working with legal teams on technical IP protection</li>
+                        </ul>
+                    </div>
+
+                    <p>We understand that research data protection isn't just about compliance—it's about protecting your competitive position and patent portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="real-world-section">
+        <div class="section-header">
+            <h2>How We've Helped San Diego Life Sciences Companies</h2>
+            <p>Real examples of IT infrastructure supporting research operations and growth.</p>
+        </div>
+
+        <div class="case-studies">
+            <div class="case-study">
+                <div class="case-study-header">
+                    <span class="company-type">Early-Stage Biotech</span>
+                    <span class="company-type">Torrey Pines</span>
+                </div>
+                
+                <h3>Securing Research Data & Supporting Growth</h3>
+                
+                <p>A therapeutics company approaching Series A was operating on consumer-grade IT infrastructure. Research data was stored on individual laptops. No centralized backup. Scientists were emailing large datasets to collaborators. Their investors flagged IT infrastructure as a concern during due diligence.</p>
+
+                <p>We implemented proper research data infrastructure:</p>
+
+                <ul>
+                    <li>Centralized file server with access controls for research data</li>
+                    <li>Automated daily backups with offsite retention</li>
+                    <li>Secure file sharing platform for external collaboration</li>
+                    <li>Network documentation and system inventory</li>
+                    <li>Data access logging for audit purposes</li>
+                    <li>Disaster recovery plan with documented procedures</li>
+                </ul>
+
+                <div class="outcome-highlight">
+                    <p><strong>Outcome:</strong> Series A closed successfully with IT infrastructure cited as a positive in diligence. As they scaled from 8 to 25 employees over 18 months, the infrastructure supported growth without major rework. Research data backup prevented loss when two laptops were stolen from vehicles—complete recovery within 2 hours.</p>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-header">
+                    <span class="company-type">Research Services Company</span>
+                    <span class="company-type">Sorrento Valley</span>
+                </div>
+                
+                <h3>Multi-Site Data Access & Lab Instrument Integration</h3>
+                
+                <p>A contract research organization providing analytical services needed to connect lab instruments at two locations to a centralized data management system. Their previous IT provider couldn't figure out how to network the instruments securely without exposing them to the internet.</p>
+
+                <p>We designed a site-to-site architecture:</p>
+
+                <ul>
+                    <li>Secure VPN connecting both lab locations</li>
+                    <li>Isolated instrument network at each site</li>
+                    <li>Centralized file server accessible from both locations</li>
+                    <li>Automated instrument data collection and backup</li>
+                    <li>Remote access for scientists working from home</li>
+                    <li>Documented network architecture for their SOPs</li>
+                </ul>
+
+                <div class="outcome-highlight">
+                    <p><strong>Outcome:</strong> Scientists at either location can access all instrument data within minutes. Sample turnaround time decreased because data no longer needed manual transfer. System supported their growth to a third location 14 months later using the same architecture. Client feedback: "Finally have IT people who understand lab equipment isn't just another computer."</p>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-header">
+                    <span class="company-type">Medical Device Startup</span>
+                    <span class="company-type">UTC</span>
+                </div>
+                
+                <h3>IP Protection & Secure Development Environment</h3>
+                
+                <p>A medical device company developing a diagnostic tool was concerned about protecting intellectual property as they expanded their engineering team and began working with overseas manufacturing partners. Their previous setup had no real access controls—everyone could see everything.</p>
+
+                <p>We implemented IP-focused security:</p>
+
+                <ul>
+                    <li>Granular file access controls limiting data by project/role</li>
+                    <li>Secure external collaboration platform for manufacturing partners</li>
+                    <li>Multi-factor authentication for all system access</li>
+                    <li>Activity monitoring and alerts for sensitive data access</li>
+                    <li>Encrypted laptops for engineering team</li>
+                    <li>Secure offboarding procedures for departing employees</li>
+                    <li>Regular security training for staff</li>
+                </ul>
+
+                <div class="outcome-highlight">
+                    <p><strong>Outcome:</strong> Company successfully navigated competitive patent filing situation with documented access controls showing who had access to specific design data and when. Manufacturing collaboration with overseas partner proceeded securely with appropriate data restrictions. When an employee departed to join a competitor, secure offboarding procedures prevented data transfer—audit logs confirmed no unauthorized access in final 90 days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="section-header">
+            <h2>IT Services for Life Sciences Companies</h2>
+            <p>Infrastructure, security, and support designed for research organizations.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Research Data Infrastructure</h3>
+                <p>Reliable systems for storing, backing up, and accessing scientific data:</p>
+                <ul>
+                    <li>Centralized file servers with access controls</li>
+                    <li>Automated backup and disaster recovery</li>
+                    <li>Large file storage and management</li>
+                    <li>Long-term data archival</li>
+                    <li>Lab instrument network connectivity</li>
+                    <li>Data access logging and audit trails</li>
+                    <li>Multi-site data synchronization</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Security & IP Protection</h3>
+                <p>Protecting your research data and intellectual property:</p>
+                <ul>
+                    <li>Granular access controls for sensitive data</li>
+                    <li>Multi-factor authentication</li>
+                    <li>Encrypted data storage and transmission</li>
+                    <li>Secure external collaboration platforms</li>
+                    <li>Activity monitoring and alerts</li>
+                    <li>Data loss prevention measures</li>
+                    <li>Secure offboarding procedures</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Compliance-Ready IT</h3>
+                <p>Infrastructure that supports your regulatory requirements:</p>
+                <ul>
+                    <li>Documented system configurations</li>
+                    <li>Change management procedures</li>
+                    <li>User access controls and logging</li>
+                    <li>HIPAA technical safeguards (where applicable)</li>
+                    <li>Regular backup with retention policies</li>
+                    <li>Working with your compliance team</li>
+                    <li>Supporting third-party IT audits</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Lab & Instrument Support</h3>
+                <p>IT infrastructure that works with scientific equipment:</p>
+                <ul>
+                    <li>Lab instrument network integration</li>
+                    <li>Isolated instrument networks</li>
+                    <li>Legacy system compatibility</li>
+                    <li>Specialized software support</li>
+                    <li>Instrument data backup</li>
+                    <li>After-hours support for running experiments</li>
+                    <li>Minimal disruption to ongoing work</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Scalable Infrastructure</h3>
+                <p>Right-sized IT that grows with your organization:</p>
+                <ul>
+                    <li>Cloud-first approaches for efficiency</li>
+                    <li>Infrastructure appropriate to funding stage</li>
+                    <li>Multi-site connectivity</li>
+                    <li>Remote access for distributed teams</li>
+                    <li>Investor due diligence support</li>
+                    <li>Network documentation</li>
+                    <li>Supporting organizational growth</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Managed IT Services</h3>
+                <p>Complete IT management for research organizations:</p>
+                <ul>
+                    <li>Senior engineer direct support</li>
+                    <li>Proactive monitoring and maintenance</li>
+                    <li>Help desk for scientific staff</li>
+                    <li>Vendor management</li>
+                    <li>Strategic IT planning</li>
+                    <li>Predictable monthly costs</li>
+                    <li>Understanding research workflows</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-local-section">
+        <div class="why-local-content">
+            <h2>Why a San Diego-Based IT Partner Matters</h2>
+            
+            <div class="local-advantages">
+                <div class="local-advantage">
+                    <div class="advantage-number">01</div>
+                    <div class="advantage-content">
+                        <h3>We Understand Your Ecosystem</h3>
+                        <p>San Diego's biotech cluster is unique. We understand the relationships between companies, research institutions, and funding sources. We know the local vendor landscape, which compliance consultants companies work with, and the typical challenges San Diego life sciences companies face. We've worked with companies from local accelerators, with similar investors, and navigating comparable growth stages.</p>
+                    </div>
+                </div>
+
+                <div class="local-advantage">
+                    <div class="advantage-number">02</div>
+                    <div class="advantage-content">
+                        <h3>On-Site When You Need It</h3>
+                        <p>When you're integrating a new piece of lab equipment, troubleshooting instrument connectivity, or need to be present for an important audit, you need someone on-site—not a remote technician in another state. We're in Pacific Beach. We can be in Torrey Pines, Sorrento Valley, or UTC in 20 minutes. For research operations where timing matters, geography is important.</p>
+                    </div>
+                </div>
+
+                <div class="local-advantage">
+                    <div class="advantage-number">03</div>
+                    <div class="advantage-content">
+                        <h3>We Understand Research Organizations</h3>
+                        <p>Life sciences IT is different from typical business IT. We understand that lab instruments aren't just computers, that research data has IP value, that experiments can't be interrupted, and that your compliance requirements create specific IT obligations. We work collaboratively with your teams—research, quality, regulatory—to implement IT infrastructure that supports your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="local-advantage">
+                    <div class="advantage-number">04</div>
+                    <div class="advantage-content">
+                        <h3>Independent Guidance for Technology Decisions</h3>
+                        <p>Data management vendors want you to buy their platform. Cloud providers want you on their infrastructure. Security tool vendors want you to license their solutions. We accept zero vendor commissions, so when we recommend a specific approach, platform, or tool, it's because it's the right fit for your research workflow and requirements—not because we're earning a referral fee. For decisions involving significant commitments, this independence matters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Let's Discuss Your IT Needs</h2>
+        <p>Whether you're setting up research data infrastructure, securing intellectual property, supporting lab instrument connectivity, or scaling IT for growth, we'd welcome the opportunity to discuss your specific requirements.</p>
+        <a href="/contact/contact.html" class="cta-button">Schedule Consultation</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Simple.Tech</div>
+            <div class="footer-contact">
+                <a href="tel:+16193454505">(619) 345 4505</a>
+                <a href="/cdn-cgi/l/email-protection#721a171e0232011b1f021e175c0617111a"><span class="__cf_email__" data-cfemail="d7bfb2bba797a4be

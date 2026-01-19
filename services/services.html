@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Services & Solutions | Simple.Tech San Diego</title>
+    <meta name="description" content="Comprehensive IT services in San Diego: managed IT, consulting, cybersecurity, cloud infrastructure, technical support, and disaster recovery solutions.">
+    <link rel="canonical" href="https://www.simple.tech/services/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #e8e8e8;
+            background: #0a0a0a;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #e8e8e8;
+            text-decoration: none;
+        }
+
+        .page-header {
+            background: #0f0f0f;
+            padding: 6rem 4rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+            color: #ffffff;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #b8b8b8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-section {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
+        }
+
+        .service-card {
+            background: #0f0f0f;
+            padding: 3rem;
+            border: 1px solid #2a2a2a;
+            text-decoration: none;
+            display: block;
+            transition: border-color 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #4a4a4a;
+        }
+
+        .service-card h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .service-card li {
+            color: #b8b8b8;
+            padding: 0.8rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .service-card li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 4rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+        }
+
+        .footer-section h4 {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #b8b8b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: opacity 0.3s;
+        }
+
+        .footer-section a:hover {
+            opacity: 0.6;
+        }
+
+        .footer-section p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem 2rem;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .page-header {
+                padding: 4rem 2rem;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .services-section {
+                padding: 4rem 2rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    
+/* Mobile hamburger menu */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid #2a2a2a;
+  border-radius:10px;
+  padding:.55rem .65rem;
+  line-height:0;
+  cursor:pointer;
+}
+
+.nav-toggle-icon{
+  width:22px;
+  height:22px;
+  stroke:#e8e8e8;
+  stroke-width:2;
+  fill:none;
+  stroke-linecap:round;
+}
+
+@media (max-width:768px){
+  nav{
+    flex-direction:row;
+    justify-content:space-between;
+    padding:1rem 1.25rem;
+  }
+
+  .nav-toggle{ display:inline-block; }
+
+  .nav-links{
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    background:#0a0a0a;
+    border-bottom:1px solid #2a2a2a;
+
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+    padding:.75rem 1.25rem 1rem;
+
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .25s ease;
+  }
+
+  .nav-links li{
+    padding:.9rem 0;
+    border-top:1px solid #1a1a1a;
+  }
+
+  header{ position:sticky; top:0; z-index:1000; }
+  nav{ position:relative; }
+
+  header.menu-open .nav-links{ max-height:80vh; overflow:auto; -webkit-overflow-scrolling:touch; }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <svg class="nav-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 6h18M3 12h18M3 18h18"></path>
+  </svg>
+</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>IT Services & Solutions</h1>
+        <p>Comprehensive technology services for San Diego businesses—from cybersecurity and cloud infrastructure to managed IT and strategic advisory.</p>
+    </section>
+
+    <section class="services-section">
+        <div class="services-grid">
+            <a href="/services/managed-it/managed-it.html" class="service-card">
+                <h2>Managed IT Services</h2>
+                <p>We serve as your complete IT department, handling everything from helpdesk support to infrastructure monitoring, security management, and strategic planning.</p>
+                <ul>
+                    <li>IT Support & Helpdesk</li>
+                    <li>Proactive System Monitoring</li>
+                    <li>Security Management</li>
+                    <li>Vendor Management</li>
+                    <li>Strategic IT Planning</li>
+                </ul>
+            </a>
+
+            <a href="/services/consulting/consulting.html" class="service-card">
+                <h2>IT Consulting Services</h2>
+                <p>Expert technology consulting for specific projects and initiatives. We provide senior-level guidance for security audits, cloud migrations, compliance assessments, and infrastructure upgrades.</p>
+                <ul>
+                    <li>Security Audits & Assessments</li>
+                    <li>Cloud Migration Planning</li>
+                    <li>Infrastructure Design</li>
+                    <li>Technology Roadmaps</li>
+                    <li>Compliance Support</li>
+                </ul>
+            </a>
+
+            <a href="/services/technical-support/technical-support.html" class="service-card">
+                <h2>Technical Support</h2>
+                <p>Senior-level technical support for all your IT needs. From malware removal to computer troubleshooting, our experienced engineers resolve issues quickly and effectively.</p>
+                <ul>
+                    <li>Malware & Virus Removal</li>
+                    <li>Computer Performance Issues</li>
+                    <li>Hardware Troubleshooting</li>
+                    <li>Software Configuration</li>
+                    <li>Technology Procurement</li>
+                </ul>
+            </a>
+
+            <a href="/services/backup-disaster-recovery/backup-disaster-recovery.html" class="service-card">
+                <h2>Backup & Disaster Recovery</h2>
+                <p>Protect your business with comprehensive backup solutions and disaster recovery planning. We ensure your critical data is secure and recoverable.</p>
+                <ul>
+                    <li>Automated Backup Solutions</li>
+                    <li>Disaster Recovery Planning</li>
+                    <li>Business Continuity</li>
+                    <li>Data Protection Strategy</li>
+                    <li>Recovery Testing</li>
+                </ul>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Simple.Tech</h4>
+                <ul>
+                    <li><a href="/approach/approach.html">Our Approach</a></li>
+                    <li><a href="/manifesto/manifesto.html">Manifesto</a></li>
+                    <li><a href="/second-opinion/second-opinion.html">Second Opinion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/managed-it/managed-it.html">Managed IT</a></li>
+                    <li><a href="/services/consulting/consulting.html">IT Consulting</a></li>
+                    <li><a href="/services/technical-support/technical-support.html">Technical Support</a></li>
+                    <li><a href="/services/backup-disaster-recovery/backup-disaster-recovery.html">Backup & Recovery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/insights/insights.html">Insights</a></li>
+                    <li><a href="/cfo-guide/cfo-guide.html">CFO's Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+16193454505">(619) 345 4505</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#d2bab7bea292a1bbbfa2beb7fca6b7b1ba"><span class="__cf_email__" data-cf
+
+<script>
+(function () {
+  var header = document.querySelector("header");
+  var btn = document.querySelector(".nav-toggle");
+  if (!header || !btn) return;
+
+  btn.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("menu-open");
+    btn.setAttribute("aria-expanded", String(isOpen));
+    btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+</script>
+</body>
+</html>

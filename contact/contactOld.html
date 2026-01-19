@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Simple.Tech | San Diego IT Services</title>
+    <meta name="description" content="Contact Simple.Tech for IT consulting and managed services in San Diego. Request an assessment or second opinion.">
+    <link rel="canonical" href="https://www.simple.tech/contact/">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeqwU4sAAAAAHRUxBX7yiSHT4iaFS1kIecWefql"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; line-height: 1.7; color: #e8e8e8; background: #0a0a0a; font-weight: 300; letter-spacing: 0.3px; }
+        header { background: #0a0a0a; border-bottom: 1px solid #2a2a2a; position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1500px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; }
+        .logo { font-size: 1.3rem; font-weight: 300; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+        .nav-links { display: flex; gap: 3.5rem; list-style: none; align-items: center; }
+        .nav-links a { color: #e8e8e8; text-decoration: none; font-weight: 300; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.6; }
+        
+        .page-header { background: #0f0f0f; padding: 6rem 4rem 4rem; text-align: center; border-bottom: 1px solid #1a1a1a; }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 200; color: #ffffff; }
+        .page-header p { font-size: 1.2rem; color: #b8b8b8; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        
+        .form-container { max-width: 800px; margin: 0 auto; padding: 6rem 4rem; }
+        
+        .form-section { margin-bottom: 3rem; }
+        .form-section h2 { font-size: 1.8rem; color: #ffffff; font-weight: 400; margin-bottom: 2rem; }
+        
+        .form-group { margin-bottom: 2rem; }
+        .form-group label { display: block; color: #b8b8b8; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 400; letter-spacing: 0.5px; }
+        .form-group label span { color: #ff6b6b; margin-left: 0.3rem; }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: #0f0f0f;
+            border: 1px solid #2a2a2a;
+            color: #e8e8e8;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a4a4a;
+        }
+        
+        .form-group textarea { min-height: 150px; resize: vertical; }
+        
+        .radio-group { display: grid; gap: 1rem; margin-top: 1rem; }
+        .radio-option { display: flex; align-items: center; padding: 1rem; background: #0f0f0f; border: 1px solid #2a2a2a; cursor: pointer; transition: border-color 0.3s; }
+        .radio-option:hover { border-color: #4a4a4a; }
+        .radio-option input[type="radio"] { margin-right: 1rem; }
+        .radio-option label { cursor: pointer; color: #e8e8e8; font-size: 0.95rem; margin: 0; }
+        
+        .checkbox-group { display: grid; gap: 0.8rem; margin-top: 1rem; }
+        .checkbox-option { display: flex; align-items: center; }
+        .checkbox-option input[type="checkbox"] { margin-right: 0.8rem; }
+        .checkbox-option label { cursor: pointer; color: #b8b8b8; font-size: 0.95rem; margin: 0; }
+        
+        .submit-button {
+            display: inline-block;
+            padding: 1.2rem 4rem;
+            background: #ffffff;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+        
+        .direct-contact { background: #0f0f0f; padding: 4rem; margin-top: 4rem; text-align: center; border-top: 1px solid #1a1a1a; }
+        .direct-contact h3 { font-size: 1.5rem; color: #ffffff; font-weight: 400; margin-bottom: 1.5rem; }
+        .direct-contact p { color: #b8b8b8; font-size: 1.1rem; margin-bottom: 2rem; }
+        .contact-methods { display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; }
+        .contact-method a { color: #ffffff; font-size: 1.3rem; text-decoration: none; transition: opacity 0.3s; }
+        .contact-method a:hover { opacity: 0.6; }
+        .contact-method span { display: block; color: #888; font-size: 0.85rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        footer { background: #0a0a0a; padding: 4rem; border-top: 1px solid #1a1a1a; }
+        .footer-content { max-width: 1500px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 3rem; }
+        .footer-logo { font-size: 1.1rem; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; }
+        .footer-contact a { color: #b8b8b8; text-decoration: none; display: block; margin: 0.5rem 0; font-size: 0.85rem; font-weight: 300; transition: opacity 0.3s; }
+        .footer-contact a:hover { opacity: 0.6; }
+        .footer-address { color: #888; font-size: 0.85rem; line-height: 1.8; font-weight: 300; }
+        
+        @media (max-width: 768px) {
+            nav { flex-direction: row; justify-content: center; padding: 1rem 2rem; }
+            .nav-links { display: none; }
+            .page-header { padding: 4rem 2rem; }
+            .page-header h1 { font-size: 2.5rem; }
+            .form-container { padding: 4rem 2rem; }
+            .contact-methods { flex-direction: column; gap: 2rem; }
+            .footer-content { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Let's Talk</h1>
+        <p>Tell us about your situation and we'll get back to you within 4 business hours.</p>
+    </section>
+
+    <div class="form-container">
+        <form id="contact-form" action="/contact/submit-form.php" method="POST">
+            
+            <div class="form-section">
+                <h2>Your Information</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name<span>*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Business Email<span>*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number<span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name<span>*</span></label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employees">Number of Employees<span>*</span></label>
+                    <select id="employees" name="employees" required>
+                        <option value="">Select range...</option>
+                        <option value="20-50">20-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-250">101-250</option>
+                        <option value="250+">250+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>What Are You Looking For?</h2>
+                
+                <div class="form-group">
+                    <label>Type of Service<span>*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="service-assessment" name="service_type" value="Initial Assessment" required>
+                            <label for="service-assessment">Initial Assessment / Consultation</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="service-second-opinion" name="service_type" value="Second Opinion">
+                            <label for="service-second-opinion">Second Opinion (Already Have IT Provider)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="service-managed" name="service_type" value="Managed IT Services">
+                            <label for="service-managed">Managed IT Services</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="service-consulting" name="service_type" value="IT Consulting Project">
+                            <label for="service-consulting">IT Consulting Project</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="service-support" name="service_type" value="Technical Support">
+                            <label for="service-support">Technical Support / Emergency</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Current IT Situation</h2>
+                
+                <div class="form-group">
+                    <label>Do you currently have an IT provider?<span>*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="provider-yes" name="has_provider" value="Yes" required>
+                            <label for="provider-yes">Yes, we have a current IT provider</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="provider-no" name="has_provider" value="No">
+                            <label for="provider-no">No, we handle IT internally or ad-hoc</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="provider-transition" name="has_provider" value="Transitioning">
+                            <label for="provider-transition">Yes, but looking to transition</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Tell Us More</h2>
+                
+                <div class="form-group">
+                    <label for="message">What specific challenges or needs are you facing?</label>
+                    <textarea id="message" name="message" placeholder="e.g., Need security audit, looking for better support, concerned about current provider costs, planning cloud migration, etc."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Areas of Interest (Optional)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interest-security" name="interests[]" value="Security & Compliance">
+                            <label for="interest-security">Security & Compliance</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interest-cloud" name="interests[]" value="Cloud Migration">
+                            <label for="interest-cloud">Cloud Migration</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interest-backup" name="interests[]" value="Backup & Disaster Recovery">
+                            <label for="interest-backup">Backup & Disaster Recovery</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interest-strategic" name="interests[]" value="Strategic IT Planning">
+                            <label for="interest-strategic">Strategic IT Planning</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Request</button>
+        </form>
+    </div>
+
+    <section class="direct-contact">
+        <h3>Prefer to Talk Directly?</h3>
+        <p>We're available Monday–Friday, 8am–6pm PST</p>
+        <div class="contact-methods">
+            <div class="contact-method">
+                <a href="tel:+16193454505">(619) 345-4505</a>
+                <span>Call Us</span>
+            </div>
+            <div class="contact-method">
+                <a href="/cdn-cgi/l/email-protection#82eae7eef2c2f1ebeff2eee7acf6e7e1ea"><span class="__cf_email__" data-cfemail="b7dfd2dbc7f7c4dedac7dbd299c3d2d4df">[email&#160;protected]</span></a>
+                <span>Email Us</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Simple.Tech</div>
+            <div class="footer-contact">
+                <a href="tel:+16193454505">(619) 345 4505</a>
+                <a href="/cdn-cgi/l/email-protection#563e333a2616253f3b263a33782233353e"><span class="__cf_email__" data-cfemail="29414c4559695a404459454c075d4c4a41">[email&#160;protected]</span></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Simple Tech Advisory, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // reCAPTCHA v3 integration (adds token then submits)
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // If reCAPTCHA script fails to load, submit anyway (server will reject and show error)
+                if (!window.grecaptcha) {
+                    form.submit();
+                    return;
+                }
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LeqwU4sAAAAAHRUxBX7yiSHT4iaFS1kIecWefql', { action: 'submit' })
+                        .then(function (token) {
+                            // Remove any prior token field to avoid duplicates
+                            var existing = form.querySelector('input[name="g-recaptcha-response"]');
+                            if (existing) existing.remove();
+
+                            var input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = 'g-recaptcha-response';
+                            input.value = token;
+                            form.appendChild(input);
+

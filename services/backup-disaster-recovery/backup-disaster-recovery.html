@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup & Disaster Recovery Solutions | Simple.Tech San Diego</title>
+    <meta name="description" content="Protect your business with comprehensive backup and disaster recovery solutions. Business continuity planning, data protection, and recovery services in San Diego.">
+    <link rel="canonical" href="https://www.simple.tech/services/backup-disaster-recovery/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; line-height: 1.7; color: #e8e8e8; background: #0a0a0a; font-weight: 300; letter-spacing: 0.3px; }
+        header { background: #0a0a0a; border-bottom: 1px solid #2a2a2a; position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; }
+        .logo { font-size: 1.3rem; font-weight: 300; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+        .nav-links { display: flex; gap: 4rem; list-style: none; align-items: center; }
+        .nav-links a { color: #e8e8e8; text-decoration: none; font-weight: 300; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.6; }
+        .contact-info { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; text-align: right; font-weight: 300; }
+        .contact-info a { color: #e8e8e8; text-decoration: none; }
+        .page-header { background: #0f0f0f; padding: 6rem 4rem 4rem; text-align: center; border-bottom: 1px solid #1a1a1a; }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 200; color: #ffffff; }
+        .page-header p { font-size: 1.2rem; color: #b8b8b8; max-width: 800px; margin: 0 auto; }
+        .content-section { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
+        .content-section h2 { font-size: 2.5rem; color: #ffffff; font-weight: 200; margin-bottom: 2rem; }
+        .content-section p { color: #b8b8b8; font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem; }
+        .stat-highlight { background: #0f0f0f; padding: 3rem; border-left: 3px solid #ffffff; margin: 3rem 0; }
+        .stat-highlight .stat-number { font-size: 4rem; color: #ffffff; font-weight: 200; display: block; margin-bottom: 1rem; }
+        .stat-highlight p { font-size: 1rem; margin: 0; }
+        .causes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .cause-item { background: #0f0f0f; padding: 2rem; border: 1px solid #2a2a2a; text-align: center; }
+        .cause-item .percentage { font-size: 3rem; color: #ffffff; font-weight: 200; display: block; margin-bottom: 1rem; }
+        .cause-item h3 { color: #ffffff; font-size: 1.1rem; font-weight: 400; }
+        .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin: 4rem 0; }
+        .service-item { background: #0f0f0f; padding: 2.5rem; border: 1px solid #2a2a2a; }
+        .service-item h3 { color: #ffffff; font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; }
+        .service-item p { color: #b8b8b8; font-size: 0.95rem; line-height: 1.8; }
+        .cta-section { background: #0f0f0f; padding: 5rem 4rem; text-align: center; border-top: 1px solid #1a1a1a; }
+        .cta-section h2 { font-size: 2.5rem; color: #ffffff; margin-bottom: 1.5rem; font-weight: 200; }
+        .cta-section p { color: #b8b8b8; font-size: 1.1rem; margin-bottom: 2rem; }
+        .cta-button { display: inline-block; padding: 1.1rem 3.5rem; background: #ffffff; color: #0a0a0a; text-decoration: none; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.4s ease; border: 1px solid #ffffff; }
+        .cta-button:hover { background: transparent; color: #ffffff; }
+        footer { background: #0a0a0a; padding: 4rem; border-top: 1px solid #1a1a1a; }
+        .footer-content { max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; }
+        .footer-section h4 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; margin-bottom: 1.5rem; font-weight: 400; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 0.8rem; }
+        .footer-section a { color: #b8b8b8; text-decoration: none; font-size: 0.9rem; font-weight: 300; transition: opacity 0.3s; }
+        .footer-section a:hover { opacity: 0.6; }
+        .footer-section p { color: #888; font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
+        @media (max-width: 768px) { nav { flex-direction: column; gap: 1.5rem; padding: 1.5rem 2rem; } .nav-links { flex-direction: column; gap: 1rem; } .page-header { padding: 4rem 2rem; } .page-header h1 { font-size: 2.5rem; } .content-section, .cta-section { padding: 4rem 2rem; } .causes-grid, .services-list { grid-template-columns: 1fr; } .footer-content { grid-template-columns: 1fr; gap: 3rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Backup & Disaster Recovery</h1>
+        <p>Protect your business with comprehensive backup solutions and disaster recovery planning. Ensure business continuity when disaster strikes.</p>
+    </section>
+
+    <section class="content-section">
+        <h2>Why Disaster Recovery Matters</h2>
+        
+        <div class="stat-highlight">
+            <span class="stat-number">40%</span>
+            <p>of small businesses never reopen after a disaster. Don't let your business become a statistic.</p>
+        </div>
+
+        <p>A disaster is any event that results in permanent data loss—losing access to emails, customer information, documents, or critical data vital to your business operations. The impact can be devastating, but with proper planning and backup systems in place, most disasters are preventable.</p>
+
+        <h2>Top Causes of Data Disasters</h2>
+        <div class="causes-grid">
+            <div class="cause-item">
+                <span class="percentage">44%</span>
+                <h3>Equipment Malfunction</h3>
+            </div>
+            <div class="cause-item">
+                <span class="percentage">32%</span>
+                <h3>Human Error</h3>
+            </div>
+            <div class="cause-item">
+                <span class="percentage">14%</span>
+                <h3>Software Corruption</h3>
+            </div>
+            <div class="cause-item">
+                <span class="percentage">7%</span>
+                <h3>Viruses & Malware</h3>
+            </div>
+            <div class="cause-item">
+                <span class="percentage">3%</span>
+                <h3>Natural Disaster</h3>
+            </div>
+        </div>
+
+        <div class="stat-highlight">
+            <span class="stat-number">97%</span>
+            <p>of these disasters can be avoided with a proper backup plan. We help you formulate and maintain that plan to effectively avert disaster.</p>
+        </div>
+
+        <h2>Our Backup & Recovery Solutions</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Automated Backup Systems</h3>
+                <p>We implement reliable, automated backup solutions that protect your data continuously without requiring manual intervention. Your critical business data is secured automatically, every day.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Business Continuity Planning</h3>
+                <p>When disaster hits, you need a plan to get your business operational quickly. We develop comprehensive Business Continuity Plans that prepare and guide you through the recovery process.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Disaster Recovery Testing</h3>
+                <p>A backup plan is only valuable if it works when you need it. We regularly test your recovery procedures to ensure your data can be restored quickly and completely.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Data Protection Strategy</h3>
+                <p>We assess your specific business needs and design a comprehensive data protection strategy that balances security, accessibility, and cost-effectiveness.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Protect Your Business Today</h2>
+        <p>Don't wait for disaster to strike. Let's discuss your backup and recovery needs.</p>
+        <a href="/contact/contact.html" class="cta-button">Schedule Consultation</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Simple.Tech</h4>
+                <ul>
+                    <li><a href="/approach/approach.html">Our Approach</a></li>
+                    <li><a href="/manifesto/manifesto.html">Manifesto</a></li>
+                    <li><a href="/second-opinion/second-opinion.html">Second Opinion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/managed-it/managed-it.html">Managed IT</a></li>
+                    <li><a href="/services/consulting/consulting.html">IT Consulting</a></li>
+                    <li><a href="/services/technical-support/technical-support.html">Technical Support</a></li>
+                    <li><a href="/services/backup-disaster-recovery/backup-disaster-recovery.html">Backup & Recovery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/insights/insights.html">Insights</a></li>
+                    <li><a href="/cfo-guide/cfo-guide.html">CFO's Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+16193454505">(619) 345 4505</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#acc4c9c0dcecdfc5c1dcc0c982d8c9cfc4"><span class="__cf_email__" data-cf

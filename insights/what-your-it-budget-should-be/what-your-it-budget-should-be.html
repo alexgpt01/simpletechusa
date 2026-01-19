@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Your IT Budget Should Actually Be | Simple.Tech</title>
+    <meta name="description" content="CEOs and CFOs ask constantly: 'What should we be spending on IT?' The answer they get from most providers is deliberately vague. Here are the actual numbers.">
+    <meta name="keywords" content="IT budget, technology spending, MSP costs, IT advisory San Diego, CFO technology">
+    <link rel="canonical" href="https://www.simple.tech/insights/what-your-it-budget-should-be/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #e8e8e8;
+            background: #0a0a0a;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 4rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.6;
+        }
+
+        .article-header {
+            background: #0f0f0f;
+            padding: 8rem 4rem 4rem;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .article-meta {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .article-category {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .article-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            font-weight: 200;
+            color: #ffffff;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-subtitle {
+            font-size: 1.3rem;
+            color: #b8b8b8;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .article-content p {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .article-content h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 300;
+            margin: 4rem 0 2rem;
+            line-height: 1.3;
+        }
+
+        .article-content h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+        }
+
+        .article-content strong {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .callout {
+            background: #0f0f0f;
+            padding: 3rem;
+            border-left: 3px solid #ffffff;
+            margin: 3rem 0;
+        }
+
+        .callout p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0;
+            color: #e8e8e8;
+        }
+
+        .stat-highlight {
+            text-align: center;
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .stat-number {
+            font-size: 5rem;
+            color: #ffffff;
+            font-weight: 200;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #b8b8b8;
+        }
+
+        .budget-table {
+            background: #0f0f0f;
+            border: 1px solid #2a2a2a;
+            margin: 3rem 0;
+            overflow-x: auto;
+        }
+
+        .budget-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .budget-table th {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-weight: 400;
+            text-align: left;
+            padding: 1.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .budget-table td {
+            padding: 1.5rem;
+            color: #b8b8b8;
+            border-top: 1px solid #2a2a2a;
+            font-size: 1rem;
+        }
+
+        .budget-table tr:hover {
+            background: #0d0d0d;
+        }
+
+        .cost-breakdown {
+            background: #0f0f0f;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .cost-breakdown h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+            padding-top: 1.5rem;
+            margin-top: 0.5rem;
+            border-top: 2px solid #ffffff;
+        }
+
+        .cost-item span:first-child {
+            color: #b8b8b8;
+        }
+
+        .cost-item span:last-child {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .insight-list {
+            margin: 2rem 0;
+            padding-left: 0;
+        }
+
+        .insight-list li {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            list-style: none;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .insight-list li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #888;
+        }
+
+        .warning-box {
+            background: #1a0f0f;
+            border-left: 3px solid #ff4444;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .warning-box h4 {
+            color: #ff6666;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box p {
+            color: #e8e8e8;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: #0f0f0f;
+            padding: 5rem 4rem;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+        }
+
+        .cta-section p {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.1rem 3.5rem;
+            background: #ffffff;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            border: 1px solid #ffffff;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 4rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .footer-contact a {
+            color: #b8b8b8;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            font-weight: 300;
+            transition: opacity 0.3s;
+        }
+
+        .footer-contact a:hover {
+            opacity: 0.6;
+        }
+
+        .footer-address {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: center;
+                padding: 1rem 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .contact-info {
+                display: none;
+            }
+            .article-header {
+                padding: 4rem 2rem 3rem;
+            }
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            .article-subtitle {
+                font-size: 1.1rem;
+            }
+            .article-content {
+                padding: 4rem 2rem;
+            }
+            .article-content h2 {
+                font-size: 1.8rem;
+            }
+            .stat-number {
+                font-size: 3.5rem;
+            }
+            .budget-table {
+                font-size: 0.9rem;
+            }
+            .budget-table th,
+            .budget-table td {
+                padding: 1rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="article-header">
+        <div class="article-meta">
+            <div class="article-category">Financial Planning</div>
+            <h1>What Your IT Budget Should Actually Be</h1>
+            <p class="article-subtitle">CEOs and CFOs ask constantly: "What should we be spending on IT?" The answer they get from most providers is deliberately vague. Here are the actual numbers.</p>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p>Every board meeting features the same question from the CFO: <strong>"Are we spending the right amount on technology?"</strong> The answer from most IT providers is some variation of "it depends" followed by enough qualifications to avoid giving any useful guidance.</p>
+
+        <p>This deliberate vagueness serves the provider's interest, not yours. Without benchmarks, you can't determine if your current spending is reasonable, wasteful, or inadequate. You're flying blind on one of your largest operational expenses.</p>
+
+        <p>After analyzing IT spending across 200+ businesses in San Diego—from professional services firms to manufacturing companies to healthcare practices—we can provide specific guidance on what technology should actually cost.</p>
+
+        <h2>The Per-Employee Baseline</h2>
+
+        <p>For most businesses with 20-200 employees, <strong>total IT spending should range between $250-$450 per employee per month.</strong> This includes everything: managed services, software licenses, cloud infrastructure, security tools, backup systems, and hardware amortization.</p>
+
+        <div class="stat-highlight">
+            <span class="stat-number">$250–$450</span>
+            <span class="stat-label">Per employee per month for comprehensive IT services</span>
+        </div>
+
+        <p>Companies spending significantly above this range are likely overpaying due to vendor markups, inefficient infrastructure, or services that deliver minimal business value. Companies spending below this range are typically underinvesting in security, backup systems, or strategic technology—creating operational risks that will manifest eventually.</p>
+
+        <h2>What This Budget Should Cover</h2>
+
+        <p>A properly allocated IT budget for a 50-employee company ($12,500-$22,500 monthly) breaks down approximately as follows:</p>
+
+        <div class="cost-breakdown">
+            <h4>Monthly IT Budget Breakdown (50 Employees)</h4>
+            <div class="cost-item">
+                <span>Managed IT Services / Advisory</span>
+                <span>$5,000–$8,000</span>
+            </div>
+            <div class="cost-item">
+                <span>Microsoft 365 Business Premium</span>
+                <span>$1,100–$1,250</span>
+            </div>
+            <div class="cost-item">
+                <span>Security Tools (EDR, Email Security, MFA)</span>
+                <span>$1,500–$2,500</span>
+            </div>
+            <div class="cost-item">
+                <span>Cloud Infrastructure (Azure/AWS)</span>
+                <span>$800–$2,000</span>
+            </div>
+            <div class="cost-item">
+                <span>Backup & Disaster Recovery</span>
+                <span>$600–$1,200</span>
+            </div>
+            <div class="cost-item">
+                <span>Line-of-Business Applications</span>
+                <span>$1,000–$3,000</span>
+            </div>
+            <div class="cost-item">
+                <span>Hardware Refresh (Amortized)</span>
+                <span>$800–$1,500</span>
+            </div>
+            <div class="cost-item">
+                <span>Telecommunications</span>
+                <span>$500–$1,000</span>
+            </div>
+            <div class="cost-item">
+                <span>Project Work / Improvements</span>
+                <span>$1,200–$2,000</span>
+            </div>
+            <div class="cost-item">
+                <span><strong>Total Monthly Budget</strong></span>
+                <span><strong>$12,500–$22,450</strong></span>
+            </div>
+        </div>
+
+        <p>These ranges account for industry variations and technology complexity. A law firm handling confidential client data requires more security investment than a marketing agency. A manufacturing company with specialized equipment connectivity needs different infrastructure than a consulting firm.</p>
+
+        <h2>Industry-Specific Variations</h2>
+
+        <p>While the $250-$450 per employee baseline applies broadly, certain industries have specific requirements that adjust these numbers:</p>
+
+        <div class="budget-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Industry</th>
+                        <th>Per Employee/Month</th>
+                        <th>Primary Cost Drivers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Professional Services</td>
+                        <td>$250–$350</td>
+                        <td>Standard Microsoft 365, basic security, minimal infrastructure</td>
+                    </tr>
+                    <tr>
+                        <td>Healthcare</td>
+                        <td>$400–$550</td>
+                        <td>HIPAA compliance, specialized EMR systems, enhanced security</td>
+                    </tr>
+                    <tr>
+                        <td>Legal</td>
+                        <td>$350–$500</td>
+                        <td>Document management, client confidentiality, compliance requirements</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturing</td>
+                        <td>$300–$450</td>
+                        <td>Specialized equipment, ERP systems, production floor connectivity</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Services</td>
+                        <td>$400–$600</td>
+                        <td>Regulatory compliance, enhanced security, specialized applications</td>
+                    </tr>
+                    <tr>
+                        <td>Architecture/Engineering</td>
+                        <td>$350–$500</td>
+                        <td>High-performance workstations, large file handling, specialized software</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>The Hidden Markup Problem</h2>
+
+        <p>Most businesses don't realize how much they're overpaying due to MSP markups on standard services and software licenses. Traditional managed service providers add 25-40% margins on top of list prices for products you could purchase directly.</p>
+
+        <div class="callout">
+            <p>We recently audited a 75-employee company spending $28,000 monthly on IT services. After removing MSP markups and optimizing their technology stack, their actual costs dropped to $18,500 monthly—a 34% reduction with improved service quality.</p>
+        </div>
+
+        <p>Common areas where MSPs apply excessive markups:</p>
+
+        <ul class="insight-list">
+            <li><strong>Microsoft 365 licenses</strong> — Marked up 20-35% above direct pricing through CSP programs</li>
+            <li><strong>Cloud services (Azure, AWS)</strong> — Reseller margins of 15-30% on consumption you could manage directly</li>
+            <li><strong>Security tools</strong> — 30-40% markup on endpoint protection, email security, and other point solutions</li>
+            <li><strong>Backup systems</strong> — 40-50% margin on backup storage and management you could procure independently</li>
+            <li><strong>Hardware</strong> — 25-35% markup on laptops, servers, and networking equipment available at Dell/HP direct pricing</li>
+        </ul>
+
+        <h2>What Efficient IT Spending Looks Like</h2>
+
+        <p>Well-designed technology infrastructure shouldn't require constant maintenance and intervention. Your IT budget should fund strategic advisory, proactive security management, and periodic improvement projects—not endless firefighting and emergency repairs.</p>
+
+        <p>Here's how spending should be allocated in a properly managed environment:</p>
+
+        <h3>Strategic vs. Reactive Split</h3>
+
+        <p><strong>70% Strategic Investment</strong> — Planned infrastructure improvements, security enhancements, training, and advisory services that move the business forward.</p>
+
+        <p><strong>20% Maintenance</strong> — Routine updates, monitoring, and standard support for stable systems that rarely require intervention.</p>
+
+        <p><strong>10% Reactive</strong> — Unexpected issues, emergency support, and problem resolution in well-designed environments.</p>
+
+        <div class="warning-box">
+            <h4>Warning Sign: Reactive Spending Above 30%</h4>
+            <p>If more than 30% of your IT budget goes to emergency fixes, break-fix support, and constant troubleshooting, your infrastructure is poorly designed or your provider has no incentive to stabilize it. This is the "legacy systems revenue trap" that benefits MSPs but hurts your operations.</p>
+        </div>
+
+        <h2>The True Cost of Underinvestment</h2>
+
+        <p>Some CFOs attempt to minimize IT spending by reducing security tools, delaying infrastructure upgrades, or selecting the cheapest provider. This approach creates false savings that result in much larger costs later.</p>
+
+        <p>Recent data breach statistics reveal the financial risk of IT underinvestment:</p>
+
+        <ul class="insight-list">
+            <li>Average ransomware recovery cost: $1.85 million (IBM Security, 2023)</li>
+            <li>Average data breach cost for SMBs: $2.98 million (Ponemon Institute, 2023)</li>
+            <li>Downtime cost for midsize companies: $5,600 per minute (Gartner)</li>
+            <li>Customer loss after security incident: 65% report decreased customer confidence</li>
+        </ul>
+
+        <p>A security incident that could have been prevented with $2,000/month in additional security investment often results in $500,000+ in recovery costs, regulatory fines, customer attrition, and reputational damage.</p>
+
+        <h2>Questions to Ask Your Current Provider</h2>
+
+        <p>If you're uncertain whether your current IT spending represents good value, these questions reveal the truth:</p>
+
+        <ul class="insight-list">
+            <li><strong>"Can you provide an itemized breakdown showing your margin on each service and product?"</strong> — Legitimate advisory firms operate transparently; vendors hide their markups</li>
+            <li><strong>"What would our costs be if we purchased licenses and services directly?"</strong> — Compare their marked-up pricing to public list prices</li>
+            <li><strong>"How much have our IT costs decreased year-over-year as systems stabilize?"</strong> — Efficient infrastructure requires less support over time, not more</li>
+            <li><strong>"What percentage of our monthly fee covers break-fix vs. strategic services?"</strong> — High break-fix percentages indicate infrastructure problems</li>
+            <li><strong>"Will you document all vendor incentives and referral fees you receive?"</strong> — Commission-based revenue creates conflicts of interest</li>
+        </ul>
+
+        <h2>The Right Way to Budget for Technology</h2>
+
+        <p>Technology budgets should be predictable, transparent, and aligned with business objectives. Here's how to structure IT spending effectively:</p>
+
+        <h3>Establish a Baseline Operating Budget</h3>
+
+        <p>Calculate your per-employee target ($250-$450 based on industry) and allocate monthly budget to cover core services: advisory, security, productivity tools, infrastructure, and support. This becomes your steady-state operating expense.</p>
+
+        <h3>Create a Separate Capital Budget</h3>
+
+        <p>Hardware refresh, major infrastructure projects, and significant software implementations should be capitalized rather than expensed. Budget $1,000-$1,500 per employee every 3-4 years for complete technology refresh cycles.</p>
+
+        <h3>Maintain a Project Reserve</h3>
+
+        <p>Set aside 10-15% of your annual IT budget for unplanned improvements, security enhancements, or opportunities that emerge during the year. This provides flexibility without requiring emergency budget requests.</p>
+
+        <h3>Demand Transparent Pricing</h3>
+
+        <p>Every invoice should contain clear line items showing exactly what you're paying for and at what margin. Bundled "managed services" fees that don't break down costs hide excessive markups and make it impossible to evaluate value.</p>
+
+        <h2>When Higher Spending is Justified</h2>
+
+        <p>Some business circumstances justify spending above the standard ranges:</p>
+
+        <ul class="insight-list">
+            <li><strong>Rapid growth</strong> — Companies scaling from 50 to 150 employees in 12-18 months require additional infrastructure investment and advisory support</li>
+            <li><strong>Digital transformation initiatives</strong> — Major platform migrations or business model changes temporarily increase IT spending by 30-50%</li>
+            <li><strong>Enhanced security requirements</strong> — Companies handling highly sensitive data or facing persistent threats need advanced security operations</li>
+            <li><strong>Regulatory compliance</strong> — HIPAA, SOC 2, or PCI compliance add 15-25% to baseline technology costs</li>
+            <li><strong>Complex custom applications</strong> — Businesses with proprietary software or specialized integrations require additional development and maintenance resources</li>
+        </ul>
+
+        <p>However, even in these scenarios, costs should normalize within 12-24 months as new systems stabilize and transformation projects complete.</p>
+
+        <h2>The Bottom Line</h2>
+
+        <p>Technology should cost $250-$450 per employee per month for comprehensive, enterprise-grade services. Companies paying significantly more are likely overpaying due to vendor markups or inefficient infrastructure. Companies paying less are probably underinvested in security, backup, or strategic advisory.</p>
+
+        <p>The key is working with advisors who operate transparently and profit from your efficiency rather than your complexity. When your provider's revenue model aligns with cost optimization and operational excellence, appropriate spending happens naturally.</p>
+
+        <p>If your current provider can't or won't provide transparent cost breakdowns, itemized pricing, and clear justification for every dollar spent, that's a signal that your IT budget includes substantial markups that serve their interests rather than yours.</p>
+    </article>
+
+    <section class="cta-section">
+        <h2>Get an IT Budget Assessment</h2>
+        <p>We'll analyze your current spending and identify opportunities for optimization without compromising service quality.</p>
+        <a href="/contact/contact.html" class="cta-button">Request Analysis</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Simple.Tech</div>
+            <div class="footer-contact">
+                <a href="tel:+16193454505">(619) 345 4505</a>
+                <a href="/cdn-cgi/l/email-protection#365e535a4676455f5b465a53184253555e"><span class="__cf_email__" data-cfemail="432b262f3303302a2

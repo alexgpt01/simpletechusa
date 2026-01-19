@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Simple.Tech San Diego</title>
+    <meta name="description" content="Unfiltered insights on technology strategy, vendor relationships, and what actually matters in business IT from Simple.Tech.">
+    <meta name="keywords" content="IT insights, technology strategy, MSP advice, IT budget, technology consulting">
+    <link rel="canonical" href="https://www.simple.tech/insights/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #e8e8e8;
+            background: #0a0a0a;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 4rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.6;
+        }
+
+        .page-header {
+            background: #0f0f0f;
+            padding: 6rem 4rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+            color: #ffffff;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #b8b8b8;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .insights-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 4rem;
+        }
+
+        .insight-card {
+            background: #0f0f0f;
+            padding: 3.5rem;
+            border: 1px solid #2a2a2a;
+            transition: border-color 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .insight-card:hover {
+            border-color: #4a4a4a;
+        }
+
+        .insight-category {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .insight-card h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .insight-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .cta-section {
+            background: #0f0f0f;
+            padding: 5rem 4rem;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+        }
+
+        .cta-section p {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.1rem 3.5rem;
+            background: #ffffff;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            border: 1px solid #ffffff;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 4rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .footer-contact a {
+            color: #b8b8b8;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            font-weight: 300;
+            transition: opacity 0.3s;
+        }
+
+        .footer-contact a:hover {
+            opacity: 0.6;
+        }
+
+        .footer-address {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: center;
+                padding: 1rem 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .contact-info {
+                display: none;
+            }
+            .page-header {
+                padding: 4rem 2rem;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .insights-content {
+                padding: 4rem 2rem;
+            }
+            .insights-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .insight-card {
+                padding: 2.5rem;
+            }
+            .cta-section {
+                padding: 4rem 2rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Simple.Tech</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/approach/approach.html">Approach</a></li>
+                <li><a href="/insights/insights.html">Insights</a></li>
+                <li><a href="/services/services.html">Services</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Insights</h1>
+        <p>Unfiltered perspectives on technology strategy, vendor relationships, and what actually matters in business IT.</p>
+    </section>
+
+    <section class="insights-content">
+        <div class="insights-grid">
+            <a href="/insights/your-msp-wants-you-on-legacy-systems/your-msp-wants-you-on-legacy-systems.html" class="insight-card">
+                <div class="insight-category">Strategic Insights</div>
+                <h2>Your MSP Probably Wants You to Stay on Legacy Systems</h2>
+                <p>Legacy infrastructure is a profit center for traditional MSPs. Modern, well-designed systems require less intervention—which means fewer billable hours.</p>
+            </a>
+            
+            <a href="/insights/what-your-it-budget-should-be/what-your-it-budget-should-be.html" class="insight-card">
+                <div class="insight-category">Financial Planning</div>
+                <h2>What Your IT Budget Should Actually Be</h2>
+                <p>CEOs and CFOs ask constantly: "What should we be spending on IT?" The answer they get from most providers is deliberately vague. Here are the actual numbers.</p>
+            </a>
+
+            <a href="/insights/cfo-guide/cfo-guide.html" class="insight-card">
+                <div class="insight-category">Executive Guide</div>
+                <h2>CFO's Guide to IT: Evaluating Providers & Managing Technology Costs</h2>
+                <p>A finance executive's guide to evaluating IT providers, understanding true IT costs, and balancing technology investment against business risk.</p>
+            </a>
+
+            <a href="/insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card">
+                <div class="insight-category">Industry Focus</div>
+                <h2>IT Services for San Diego Biotech & Life Sciences</h2>
+                <p>IT infrastructure and security for San Diego's biotech and life sciences companies. Supporting compliance requirements with senior engineers who understand research organizations.</p>
+            </a>
+
+            <a href="/manifesto/manifesto.html" class="insight-card">
+                <div class="insight-category">Featured</div>
+                <h2>Why Most IT Companies Are Broken</h2>
+                <p>The technology services industry has a dirty secret: your IT provider is probably incentivized to recommend the wrong solutions. Here's how the system works.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Work With Independent Advisors</h2>
+        <p>Get objective technology guidance that puts your business interests first.</p>
+        <a href="/contact/contact.html" class="cta-button">Request Assessment</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Simple.Tech</div>
+            <div class="footer-contact">
+                <a href="tel:+16193454505">(619) 345 4505</a>
+                <a href="/cdn-cgi/l/email-protection#acc4c9c0dcecdfc5c1dcc0c982d8c9cfc4"><span class="__cf_email__" data-cfemail="81e9e4edf1c1f2e8e
