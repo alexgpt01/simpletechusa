@@ -511,18 +511,18 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">Simple.Tech</a>
+            <a href="index.html" class="logo">Simple.Tech</a>
             <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
   <svg class="nav-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     <path d="M3 6h18M3 12h18M3 18h18"></path>
   </svg>
 </button>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/approach/approach.html">Approach</a></li>
-                <li><a href="/insights/insights.html">Insights</a></li>
-                <li><a href="/services/services.html">Services</a></li>
-                <li><a href="/contact/contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="approach/approach.html">Approach</a></li>
+                <li><a href="insights/insights.html">Insights</a></li>
+                <li><a href="services/services.html">Services</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -531,8 +531,8 @@
         <div class="hero-eyebrow">Independent IT Advisory • San Diego</div>
         <h1>Technology That Serves<br>Your Business Vision</h1>
         <p class="subtitle">Independent IT advisory and managed services for San Diego businesses. Senior-level expertise, zero vendor conflicts, transparent guidance.</p>
-        <a href="/contact/contact.html" class="cta-button">Request Assessment</a>
-        <a href="/second-opinion/second-opinion.html" class="cta-button-secondary">Get Second Opinion</a>
+        <a href="contact/contact.html" class="cta-button">Request Assessment</a>
+        <a href="second-opinion/second-opinion.html" class="cta-button-secondary">Get Second Opinion</a>
     </section>
 
     <section class="principles">
@@ -562,22 +562,22 @@
         <p class="services-intro">From strategic advisory to day-to-day IT management, we deliver enterprise-grade technology services without vendor conflicts.</p>
         
         <div class="services-grid">
-            <a href="/services/managed-it/managed-it.html" class="service-card">
+            <a href="services/managed-it/managed-it.html" class="service-card">
                 <h3>Managed IT Services</h3>
                 <p>Complete IT department replacement or augmentation. Helpdesk, infrastructure monitoring, security management, strategic planning.</p>
             </a>
             
-            <a href="/services/consulting/consulting.html" class="service-card">
+            <a href="services/consulting/consulting.html" class="service-card">
                 <h3>IT Consulting</h3>
                 <p>Project-based consulting for security audits, cloud migrations, infrastructure design, and technology assessments.</p>
             </a>
             
-            <a href="/services/technical-support/technical-support.html" class="service-card">
+            <a href="services/technical-support/technical-support.html" class="service-card">
                 <h3>Technical Support</h3>
                 <p>Senior-level support for specific issues. No contracts, no monthly minimums—just expert help when needed.</p>
             </a>
             
-            <a href="/services/backup-disaster-recovery/backup-disaster-recovery.html" class="service-card">
+            <a href="services/backup-disaster-recovery/backup-disaster-recovery.html" class="service-card">
                 <h3>Backup & Disaster Recovery</h3>
                 <p>Business continuity planning, automated backups, disaster recovery testing, and data protection strategy.</p>
             </a>
@@ -588,7 +588,7 @@
         <div class="section-eyebrow">Already Have an IT Provider?</div>
         <h2>Get a Second Opinion</h2>
         <p>We'll review your current IT setup, costs, and provider relationship. No sales pitch—just an honest assessment of whether you're getting good value and where improvements could be made.</p>
-        <a href="/second-opinion/second-opinion.html" class="cta-button">Request Second Opinion</a>
+        <a href="second-opinion/second-opinion.html" class="cta-button">Request Second Opinion</a>
     </section>
 
     <section class="insights-section">
@@ -597,31 +597,31 @@
         <p class="insights-intro">Unfiltered perspectives on technology strategy, vendor relationships, and what actually matters in business IT.</p>
         
         <div class="insights-grid">
-            <a href="/insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card">
+            <a href="insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card">
                 <h3>IT Services for San Diego Biotech & Life Sciences</h3>
                 <p>IT infrastructure and security for San Diego's biotech and life sciences companies. Supporting compliance requirements with senior engineers who understand research organizations.</p>
             </a>
             
-            <a href="/insights/cfo-guide/cfo-guide.html" class="insight-card">
+            <a href="insights/cfo-guide/cfo-guide.html" class="insight-card">
                 <h3>CFO's Guide to Evaluating IT Providers</h3>
                 <p>A finance executive's guide to understanding true IT costs and identifying hidden markups.</p>
             </a>
 
-            <a href="/insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card">
+            <a href="insights/your-msp-wants-you-on-legacy-systems/your-msp-wants-you-on-legacy-systems.html" class="insight-card">
                 <h3>Your MSP Probably Wants You to Stay on Legacy Systems</h3>
                 <p>Legacy infrastructure is a profit center for traditional MSPs. Modern systems require less intervention—fewer billable hours.</p>
             </a>
         </div>
 
         <div class="insights-cta">
-            <a href="/insights/insights.html" class="cta-button-secondary">View All Insights</a>
+            <a href="insights/insights.html" class="cta-button-secondary">View All Insights</a>
         </div>
     </section>
 
     <section class="final-cta">
         <h2>Work With Independent Advisors</h2>
         <p>Get objective technology guidance that puts your business interests first. No vendor commissions. No conflicts of interest.</p>
-        <a href="/contact/contact.html" class="cta-button">Get Started</a>
+        <a href="contact/contact.html" class="cta-button">Get Started</a>
     </section>
 
     <footer>
@@ -635,6 +635,57 @@
                 San Diego, California 92109
 
 <script>
+// #region agent log
+(function () {
+  var logEndpoint = 'http://127.0.0.1:7242/ingest/09901578-befa-4f1c-b0bf-446b129a7d5b';
+  var log = function(location, message, data, hypothesisId) {
+    fetch(logEndpoint, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        location: location,
+        message: message,
+        data: data || {},
+        timestamp: Date.now(),
+        sessionId: 'debug-session',
+        runId: 'post-fix',
+        hypothesisId: hypothesisId || ''
+      })
+    }).catch(function() {});
+  };
+  
+  // Hypothesis A, B, C: Check protocol and base href
+  log('index.html:pageLoad', 'Page loaded - checking protocol and base', {
+    protocol: window.location.protocol,
+    href: window.location.href,
+    pathname: window.location.pathname,
+    hasBaseHref: !!document.querySelector('base[href]'),
+    baseHref: document.querySelector('base[href]')?.getAttribute('href') || 'none'
+  }, 'A');
+  
+  // Hypothesis D: Track all link clicks
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link || !link.href) return;
+    
+    log('index.html:linkClick', 'Link clicked', {
+      href: link.getAttribute('href'),
+      resolvedHref: link.href,
+      isAbsolute: link.getAttribute('href').startsWith('/'),
+      protocol: new URL(link.href, window.location.href).protocol
+    }, 'D');
+  }, true);
+  
+  // Track navigation attempts
+  window.addEventListener('beforeunload', function() {
+    log('index.html:beforeUnload', 'Navigation starting', {
+      currentUrl: window.location.href,
+      targetUrl: document.referrer
+    }, 'B');
+  });
+})();
+// #endregion agent log
+
 (function () {
   var header = document.querySelector("header");
   var btn = document.querySelector(".nav-toggle");
