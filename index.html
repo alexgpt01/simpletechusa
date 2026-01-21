@@ -635,57 +635,6 @@
                 San Diego, California 92109
 
 <script>
-// #region agent log
-(function () {
-  var logEndpoint = 'http://127.0.0.1:7242/ingest/09901578-befa-4f1c-b0bf-446b129a7d5b';
-  var log = function(location, message, data, hypothesisId) {
-    fetch(logEndpoint, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        location: location,
-        message: message,
-        data: data || {},
-        timestamp: Date.now(),
-        sessionId: 'debug-session',
-        runId: 'post-fix',
-        hypothesisId: hypothesisId || ''
-      })
-    }).catch(function() {});
-  };
-  
-  // Hypothesis A, B, C: Check protocol and base href
-  log('index.html:pageLoad', 'Page loaded - checking protocol and base', {
-    protocol: window.location.protocol,
-    href: window.location.href,
-    pathname: window.location.pathname,
-    hasBaseHref: !!document.querySelector('base[href]'),
-    baseHref: document.querySelector('base[href]')?.getAttribute('href') || 'none'
-  }, 'A');
-  
-  // Hypothesis D: Track all link clicks
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('a');
-    if (!link || !link.href) return;
-    
-    log('index.html:linkClick', 'Link clicked', {
-      href: link.getAttribute('href'),
-      resolvedHref: link.href,
-      isAbsolute: link.getAttribute('href').startsWith('/'),
-      protocol: new URL(link.href, window.location.href).protocol
-    }, 'D');
-  }, true);
-  
-  // Track navigation attempts
-  window.addEventListener('beforeunload', function() {
-    log('index.html:beforeUnload', 'Navigation starting', {
-      currentUrl: window.location.href,
-      targetUrl: document.referrer
-    }, 'B');
-  });
-})();
-// #endregion agent log
-
 (function () {
   var header = document.querySelector("header");
   var btn = document.querySelector(".nav-toggle");

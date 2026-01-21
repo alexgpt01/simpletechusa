@@ -47,13 +47,82 @@
         .footer-section a { color: #b8b8b8; text-decoration: none; font-size: 0.9rem; font-weight: 300; transition: opacity 0.3s; }
         .footer-section a:hover { opacity: 0.6; }
         .footer-section p { color: #888; font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
-        @media (max-width: 768px) { nav { flex-direction: column; gap: 1.5rem; padding: 1.5rem 2rem; } .nav-links { flex-direction: column; gap: 1rem; } .page-header { padding: 4rem 2rem; } .page-header h1 { font-size: 2.5rem; } .content-section, .cta-section { padding: 4rem 2rem; } .causes-grid, .services-list { grid-template-columns: 1fr; } .footer-content { grid-template-columns: 1fr; gap: 3rem; } }
+        /* Mobile hamburger menu */
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: .55rem .65rem;
+            line-height: 0;
+            cursor: pointer;
+        }
+
+        .nav-toggle-icon {
+            width: 22px;
+            height: 22px;
+            stroke: #e8e8e8;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 1.25rem;
+            }
+
+            .nav-toggle { display: inline-block; }
+
+            .nav-links {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: #0a0a0a;
+                border-bottom: 1px solid #2a2a2a;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                padding: .75rem 1.25rem 1rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .25s ease;
+            }
+
+            .nav-links li {
+                padding: .9rem 0;
+                border-top: 1px solid #1a1a1a;
+            }
+
+            header { position: sticky; top: 0; z-index: 1000; }
+            nav { position: relative; }
+
+            header.menu-open .nav-links {
+                max-height: 80vh;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .page-header { padding: 4rem 2rem; }
+            .page-header h1 { font-size: 2.5rem; }
+            .content-section, .cta-section { padding: 4rem 2rem; }
+            .causes-grid, .services-list { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 3rem; }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="../../index.html" class="logo">Simple.Tech</a>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <svg class="nav-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 6h18M3 12h18M3 18h18"></path>
+  </svg>
+</button>
             <ul class="nav-links">
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../../approach/approach.html">Approach</a></li>
@@ -171,4 +240,24 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="tel:+16193454505">(619) 345 4505</a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#acc4c9c0dcecdfc5c1dcc0c982d8c9cfc4"><span class="__cf_email__" data-cf
+                    <li><a href="/cdn-cgi/l/email-protection#acc4c9c0dcecdfc5c1dcc0c982d8c9cfc4"><span class="__cf_email__" data-cfemail="81e9e4edf1c1f2e8ecf1ede4aff5e4e2e9">[email&#160;protected]</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script>
+(function () {
+  var header = document.querySelector("header");
+  var btn = document.querySelector(".nav-toggle");
+  if (!header || !btn) return;
+
+  btn.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("menu-open");
+    btn.setAttribute("aria-expanded", String(isOpen));
+    btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+</script>
+</body>
+</html>

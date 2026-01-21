@@ -43,13 +43,84 @@
         .footer-contact a { color: #b8b8b8; text-decoration: none; display: block; margin: 0.5rem 0; font-size: 0.85rem; font-weight: 300; transition: opacity 0.3s; }
         .footer-contact a:hover { opacity: 0.6; }
         .footer-address { color: #888; font-size: 0.85rem; line-height: 1.8; font-weight: 300; }
-        @media (max-width: 768px) { nav { flex-direction: row; justify-content: center; padding: 1rem 2rem; } .nav-links { display: none; } .hero { padding: 4rem 2rem 3rem; } .hero h1 { font-size: 2.5rem; } .content, .cta-section { padding: 4rem 2rem; } .review-grid { grid-template-columns: 1fr; } .step { flex-direction: column; gap: 1rem; } .step-number { width: auto; } .footer-content { flex-direction: column; text-align: center; } }
+        /* Mobile hamburger menu */
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: .55rem .65rem;
+            line-height: 0;
+            cursor: pointer;
+        }
+
+        .nav-toggle-icon {
+            width: 22px;
+            height: 22px;
+            stroke: #e8e8e8;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 1.25rem;
+            }
+
+            .nav-toggle { display: inline-block; }
+
+            .nav-links {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: #0a0a0a;
+                border-bottom: 1px solid #2a2a2a;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                padding: .75rem 1.25rem 1rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .25s ease;
+            }
+
+            .nav-links li {
+                padding: .9rem 0;
+                border-top: 1px solid #1a1a1a;
+            }
+
+            header { position: sticky; top: 0; z-index: 1000; }
+            nav { position: relative; }
+
+            header.menu-open .nav-links {
+                max-height: 80vh;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .hero { padding: 4rem 2rem 3rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .content, .cta-section { padding: 4rem 2rem; }
+            .review-grid { grid-template-columns: 1fr; }
+            .step { flex-direction: column; gap: 1rem; }
+            .step-number { width: auto; }
+            .footer-content { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="../index.html" class="logo">Simple.Tech</a>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <svg class="nav-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 6h18M3 12h18M3 18h18"></path>
+  </svg>
+</button>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../approach/approach.html">Approach</a></li>
@@ -137,3 +208,22 @@
             <div class="footer-address">
                 4629 Cass Street<br>
                 San Diego, California 92109
+            </div>
+        </div>
+    </footer>
+
+<script>
+(function () {
+  var header = document.querySelector("header");
+  var btn = document.querySelector(".nav-toggle");
+  if (!header || !btn) return;
+
+  btn.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("menu-open");
+    btn.setAttribute("aria-expanded", String(isOpen));
+    btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+</script>
+</body>
+</html>
