@@ -403,6 +403,27 @@
             font-weight: 300;
         }
 
+        /* Fade-in on scroll animation */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Respect reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in-on-scroll {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
         @media (max-width: 1024px) {
             .principles-grid {
                 grid-template-columns: 1fr;
@@ -536,19 +557,19 @@
     </section>
 
     <section class="principles">
-        <div class="section-eyebrow">What Makes Us Different</div>
+        <div class="section-eyebrow fade-in-on-scroll">What Makes Us Different</div>
         <div class="principles-grid">
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">01</div>
                 <h3>Independent Advisory</h3>
                 <p>Zero vendor commissions or kickbacks. We provide unbiased technology recommendations based solely on your business needs.</p>
             </div>
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">02</div>
                 <h3>Senior Experts Only</h3>
                 <p>Every client works directly with senior engineers (10+ years experience). No junior technicians, no tiered support.</p>
             </div>
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">03</div>
                 <h3>Business-First Communication</h3>
                 <p>Technology strategy explained in business terms. Clear ROI, risk assessment, and decision frameworks—no jargon.</p>
@@ -557,27 +578,27 @@
     </section>
 
     <section class="services-section">
-        <div class="section-eyebrow">Services</div>
-        <h2>How We Help</h2>
-        <p class="services-intro">From strategic advisory to day-to-day IT management, we deliver enterprise-grade technology services without vendor conflicts.</p>
+        <div class="section-eyebrow fade-in-on-scroll">Services</div>
+        <h2 class="fade-in-on-scroll">How We Help</h2>
+        <p class="services-intro fade-in-on-scroll">From strategic advisory to day-to-day IT management, we deliver enterprise-grade technology services without vendor conflicts.</p>
         
         <div class="services-grid">
-            <a href="services/managed-it/managed-it.html" class="service-card">
+            <a href="services/managed-it/managed-it.html" class="service-card fade-in-on-scroll">
                 <h3>Managed IT Services</h3>
                 <p>Complete IT department replacement or augmentation. Helpdesk, infrastructure monitoring, security management, strategic planning.</p>
             </a>
             
-            <a href="services/consulting/consulting.html" class="service-card">
+            <a href="services/consulting/consulting.html" class="service-card fade-in-on-scroll">
                 <h3>IT Consulting</h3>
                 <p>Project-based consulting for security audits, cloud migrations, infrastructure design, and technology assessments.</p>
             </a>
             
-            <a href="services/technical-support/technical-support.html" class="service-card">
+            <a href="services/technical-support/technical-support.html" class="service-card fade-in-on-scroll">
                 <h3>Technical Support</h3>
                 <p>Senior-level support for specific issues. No contracts, no monthly minimums—just expert help when needed.</p>
             </a>
             
-            <a href="services/backup-disaster-recovery/backup-disaster-recovery.html" class="service-card">
+            <a href="services/backup-disaster-recovery/backup-disaster-recovery.html" class="service-card fade-in-on-scroll">
                 <h3>Backup & Disaster Recovery</h3>
                 <p>Business continuity planning, automated backups, disaster recovery testing, and data protection strategy.</p>
             </a>
@@ -585,43 +606,43 @@
     </section>
 
     <section class="second-opinion-section">
-        <div class="section-eyebrow">Already Have an IT Provider?</div>
-        <h2>Get a Second Opinion</h2>
-        <p>We'll review your current IT setup, costs, and provider relationship. No sales pitch—just an honest assessment of whether you're getting good value and where improvements could be made.</p>
-        <a href="second-opinion/second-opinion.html" class="cta-button">Request Second Opinion</a>
+        <div class="section-eyebrow fade-in-on-scroll">Already Have an IT Provider?</div>
+        <h2 class="fade-in-on-scroll">Get a Second Opinion</h2>
+        <p class="fade-in-on-scroll">We'll review your current IT setup, costs, and provider relationship. No sales pitch—just an honest assessment of whether you're getting good value and where improvements could be made.</p>
+        <a href="second-opinion/second-opinion.html" class="cta-button fade-in-on-scroll">Request Second Opinion</a>
     </section>
 
     <section class="insights-section">
-        <div class="section-eyebrow">Latest Thinking</div>
-        <h2>Insights on IT & Business</h2>
-        <p class="insights-intro">Unfiltered perspectives on technology strategy, vendor relationships, and what actually matters in business IT.</p>
+        <div class="section-eyebrow fade-in-on-scroll">Latest Thinking</div>
+        <h2 class="fade-in-on-scroll">Insights on IT & Business</h2>
+        <p class="insights-intro fade-in-on-scroll">Unfiltered perspectives on technology strategy, vendor relationships, and what actually matters in business IT.</p>
         
         <div class="insights-grid">
-            <a href="insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card">
+            <a href="insights/biotech-life-sciences/biotech-life-sciences.html" class="insight-card fade-in-on-scroll">
                 <h3>IT Services for San Diego Biotech & Life Sciences</h3>
                 <p>IT infrastructure and security for San Diego's biotech and life sciences companies. Supporting compliance requirements with senior engineers who understand research organizations.</p>
             </a>
             
-            <a href="insights/cfo-guide/cfo-guide.html" class="insight-card">
+            <a href="insights/cfo-guide/cfo-guide.html" class="insight-card fade-in-on-scroll">
                 <h3>CFO's Guide to Evaluating IT Providers</h3>
                 <p>A finance executive's guide to understanding true IT costs and identifying hidden markups.</p>
             </a>
 
-            <a href="insights/your-msp-wants-you-on-legacy-systems/your-msp-wants-you-on-legacy-systems.html" class="insight-card">
+            <a href="insights/your-msp-wants-you-on-legacy-systems/your-msp-wants-you-on-legacy-systems.html" class="insight-card fade-in-on-scroll">
                 <h3>Your MSP Probably Wants You to Stay on Legacy Systems</h3>
                 <p>Legacy infrastructure is a profit center for traditional MSPs. Modern systems require less intervention—fewer billable hours.</p>
             </a>
         </div>
 
         <div class="insights-cta">
-            <a href="insights/insights.html" class="cta-button-secondary">View All Insights</a>
+            <a href="insights/insights.html" class="cta-button-secondary fade-in-on-scroll">View All Insights</a>
         </div>
     </section>
 
     <section class="final-cta">
-        <h2>Work With Independent Advisors</h2>
-        <p>Get objective technology guidance that puts your business interests first. No vendor commissions. No conflicts of interest.</p>
-        <a href="contact/contact.html" class="cta-button">Get Started</a>
+        <h2 class="fade-in-on-scroll">Work With Independent Advisors</h2>
+        <p class="fade-in-on-scroll">Get objective technology guidance that puts your business interests first. No vendor commissions. No conflicts of interest.</p>
+        <a href="contact/contact.html" class="cta-button fade-in-on-scroll">Get Started</a>
     </section>
 
     <footer>
@@ -644,6 +665,43 @@
     var isOpen = header.classList.toggle("menu-open");
     btn.setAttribute("aria-expanded", String(isOpen));
     btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+
+// Fade-in on scroll animation
+(function() {
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    // If reduced motion is preferred, show all elements immediately
+    const elements = document.querySelectorAll('.fade-in-on-scroll');
+    elements.forEach(function(el) {
+      el.classList.add('animated');
+    });
+    return;
+  }
+
+  // Intersection Observer for fade-in animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        // Unobserve after animation to improve performance
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with fade-in-on-scroll class
+  const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+  fadeElements.forEach(function(element) {
+    observer.observe(element);
   });
 })();
 </script>

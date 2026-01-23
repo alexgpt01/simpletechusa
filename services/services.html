@@ -209,6 +209,26 @@
             font-weight: 300;
         }
 
+        /* Fade-in on scroll animation */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in-on-scroll {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
         @media (max-width: 1024px) {
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
@@ -419,6 +439,38 @@
     var isOpen = header.classList.toggle("menu-open");
     btn.setAttribute("aria-expanded", String(isOpen));
     btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+
+// Fade-in on scroll animation
+(function() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    const elements = document.querySelectorAll('.fade-in-on-scroll');
+    elements.forEach(function(el) {
+      el.classList.add('animated');
+    });
+    return;
+  }
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+  fadeElements.forEach(function(element) {
+    observer.observe(element);
   });
 })();
 </script>

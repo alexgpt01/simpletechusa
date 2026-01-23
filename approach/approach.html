@@ -48,6 +48,28 @@
         .footer-section a { color: #b8b8b8; text-decoration: none; font-size: 0.9rem; font-weight: 300; transition: opacity 0.3s; }
         .footer-section a:hover { opacity: 0.6; }
         .footer-section p { color: #888; font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
+        
+        /* Fade-in on scroll animation */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Respect reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in-on-scroll {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+        
         @media (max-width: 1024px) { .footer-content { grid-template-columns: repeat(2, 1fr); } }
         
         /* Mobile hamburger menu */
@@ -137,38 +159,38 @@
     </header>
 
     <section class="page-header">
-        <h1>Why Businesses Choose Simple.Tech</h1>
-        <p>The technology services industry has long suffered from misaligned incentives. We've built our practice on a fundamentally different model—one where your success is our singular objective.</p>
+        <h1 class="fade-in-on-scroll">Why Businesses Choose Simple.Tech</h1>
+        <p class="fade-in-on-scroll">The technology services industry has long suffered from misaligned incentives. We've built our practice on a fundamentally different model—one where your success is our singular objective.</p>
     </section>
 
     <section class="section">
-        <div class="section-eyebrow">OUR DISTINCTION</div>
-        <h2>IT Services Without Hidden Conflicts</h2>
-        <p>Most IT service providers earn significant revenue from vendor partnerships and product markups, creating conflicts of interest. Simple.Tech operates differently—we're a truly independent technology advisor that prioritizes your business outcomes over commission-based sales.</p>
+        <div class="section-eyebrow fade-in-on-scroll">OUR DISTINCTION</div>
+        <h2 class="fade-in-on-scroll">IT Services Without Hidden Conflicts</h2>
+        <p class="fade-in-on-scroll">Most IT service providers earn significant revenue from vendor partnerships and product markups, creating conflicts of interest. Simple.Tech operates differently—we're a truly independent technology advisor that prioritizes your business outcomes over commission-based sales.</p>
 
         <div class="values-grid">
-            <div class="value-card">
+            <div class="value-card fade-in-on-scroll">
                 <h3>Zero Vendor Commissions</h3>
                 <p>Traditional MSPs and IT consultants earn 20-40% margins on hardware, software licenses, and cloud services they resell. This creates pressure to recommend expensive solutions that maximize their profit.</p>
                 <p>Simple.Tech accepts absolutely no vendor kickbacks, referral fees, or reseller margins. When we recommend Microsoft 365, AWS, cybersecurity tools, or any technology, it's because it's the right fit for your business—not because we earn a commission.</p>
                 <span class="value-impact">Result: Technology recommendations based purely on business value</span>
             </div>
 
-            <div class="value-card">
+            <div class="value-card fade-in-on-scroll">
                 <h3>Transparent IT Billing</h3>
                 <p>Our invoices contain clear line items with detailed descriptions of work performed. No surprise overtime charges, no hidden fees, no ambiguous "maintenance" costs.</p>
                 <p>Business leaders and finance teams appreciate predictable IT expenses that match quoted rates exactly. Every hour is documented and justified.</p>
                 <span class="value-impact">Result: Accurate IT budget forecasting and financial planning</span>
             </div>
 
-            <div class="value-card">
+            <div class="value-card fade-in-on-scroll">
                 <h3>Executive-Ready Technology Guidance</h3>
                 <p>CIOs, CTOs, and business executives need IT strategy explained in business terms—ROI, risk mitigation, competitive advantage, operational efficiency.</p>
                 <p>We present technology options with clear trade-offs, cost implications, and business impact. No technical jargon that obscures critical decisions.</p>
                 <span class="value-impact">Result: Informed technology decisions aligned with business strategy</span>
             </div>
 
-            <div class="value-card">
+            <div class="value-card fade-in-on-scroll">
                 <h3>Senior Engineer Direct Access</h3>
                 <p>When you contact Simple.Tech, you speak directly with senior systems engineers who have solved complex IT challenges across multiple industries.</p>
                 <p>No Level 1 support tickets, no waiting for escalation to "senior" staff. Issues are diagnosed and resolved on first contact by experienced professionals who understand both technology and business requirements.</p>
@@ -178,20 +200,20 @@
     </section>
 
     <section class="principles-section">
-        <div class="section-eyebrow" style="text-align: center;">OUR FOUNDATION</div>
-        <h2 style="text-align: center; font-size: 2.8rem; color: #ffffff; font-weight: 200; margin-bottom: 1rem;">What Makes Simple.Tech Different</h2>
+        <div class="section-eyebrow fade-in-on-scroll" style="text-align: center;">OUR FOUNDATION</div>
+        <h2 class="fade-in-on-scroll" style="text-align: center; font-size: 2.8rem; color: #ffffff; font-weight: 200; margin-bottom: 1rem;">What Makes Simple.Tech Different</h2>
         <div class="principles-grid">
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">01</div>
                 <h3>Independent IT Advisory</h3>
                 <p>Unlike traditional managed service providers (MSPs) who earn commissions from vendors, Simple.Tech accepts zero referral fees or kickbacks. We provide unbiased technology recommendations based solely on your business needs, not vendor incentives.</p>
             </div>
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">02</div>
                 <h3>Senior Technology Experts</h3>
                 <p>Every client works directly with senior engineers and technology consultants who have 10+ years of experience. No junior technicians, no tiered support queues, no escalations. First-contact resolution from seasoned IT professionals.</p>
             </div>
-            <div class="principle-item">
+            <div class="principle-item fade-in-on-scroll">
                 <div class="principle-number">03</div>
                 <h3>Clear Business Communication</h3>
                 <p>We translate technical complexity into clear business language for executives and decision-makers. Technology strategy explained without jargon, helping leadership make informed IT investment decisions.</p>
@@ -200,9 +222,9 @@
     </section>
 
     <section class="cta-section">
-        <h2>Experience the Difference</h2>
-        <p>Work with a technology partner that puts your interests first.</p>
-        <a href="../contact/contact.html" class="cta-button">Schedule Consultation</a>
+        <h2 class="fade-in-on-scroll">Experience the Difference</h2>
+        <p class="fade-in-on-scroll">Work with a technology partner that puts your interests first.</p>
+        <a href="../contact/contact.html" class="cta-button fade-in-on-scroll">Schedule Consultation</a>
     </section>
 
     <footer>
@@ -253,6 +275,38 @@
     var isOpen = header.classList.toggle("menu-open");
     btn.setAttribute("aria-expanded", String(isOpen));
     btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+})();
+
+// Fade-in on scroll animation
+(function() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    const elements = document.querySelectorAll('.fade-in-on-scroll');
+    elements.forEach(function(el) {
+      el.classList.add('animated');
+    });
+    return;
+  }
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+  fadeElements.forEach(function(element) {
+    observer.observe(element);
   });
 })();
 </script>
