@@ -208,40 +208,44 @@
         .footer-content {
             max-width: 1500px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 3rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
         }
 
-        .footer-logo {
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 3px;
+        .footer-section h4 {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
-        .footer-contact a {
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
             color: #b8b8b8;
             text-decoration: none;
-            display: block;
-            margin: 0.5rem 0;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 300;
             transition: opacity 0.3s;
         }
 
-        .footer-contact a:hover {
+        .footer-section a:hover {
             opacity: 0.6;
         }
 
-        .footer-address {
-            color: #888;
-            font-size: 0.85rem;
-            line-height: 1.8;
-            font-weight: 300;
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -276,8 +280,8 @@
                 padding: 4rem 2rem;
             }
             .footer-content {
-                flex-direction: column;
-                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
         }
         
@@ -346,8 +350,8 @@
             .insights-grid { grid-template-columns: 1fr; gap: 2rem; }
             .insight-card { padding: 2.5rem; }
             .footer-content {
-                flex-direction: column;
-                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
         }
     </style>
@@ -418,9 +422,38 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Simple.Tech</div>
-            <div class="footer-contact">
-                <a href="tel:+16193454505">(619) 345 4505</a>
+            <div class="footer-section">
+                <h4>Simple.Tech</h4>
+                <ul>
+                    <li><a href="../approach/approach.html">Our Approach</a></li>
+                    <li><a href="../manifesto/manifesto.html">Manifesto</a></li>
+                    <li><a href="../second-opinion/second-opinion.html">Second Opinion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../services/managed-it/managed-it.html">Managed IT</a></li>
+                    <li><a href="../services/consulting/consulting.html">IT Consulting</a></li>
+                    <li><a href="../services/technical-support/technical-support.html">Technical Support</a></li>
+                    <li><a href="../services/backup-disaster-recovery/backup-disaster-recovery.html">Backup & Recovery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="cfo-guide/cfo-guide.html">CFO's Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+16193454505">(619) 345 4505</a></li>
+                </ul>
             </div>
         </div>
     </footer>
